@@ -1,65 +1,97 @@
-// src/pages/HomePage.js
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"; // Example logo
-import "./HomePage.css";
+import styles from "./HomePage.module.css"; // Import the CSS module
 
+/**
+ * HomePage Component
+ * Renders the main landing page with Hero, Services, and Contact sections.
+ */
 const HomePage = () => {
   return (
-    <div className="home-page">
-      {/* Header with Navigation */}
-
+    <div className={styles.homePage}>
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <section id="hero" className="home-page-hero">
-          <div className="hero-content">
-            <h1>Live your life to the fullest</h1>
-            <a href="#services" className="btn-primary">
+        <section
+          id="hero"
+          className={styles.homePageHero}
+          aria-labelledby="hero-heading"
+        >
+          <div className={styles.heroContent}>
+            <h1 id="hero-heading">Live Your Life to the Fullest</h1>
+            <p>
+              Empowering individuals through holistic therapeutic approaches for
+              a balanced, healthy life.
+            </p>
+            <a href="#services" className={styles.btnPrimary}>
               Explore Our Services
             </a>
           </div>
         </section>
 
-        {/* About Section */}
-
         {/* Services Section */}
-        <section id="services" className="home-page-services">
-          <div className="home-page-service">
-            <h2>Occupational Therapy</h2>
-            {/* Add an icon or image here if desired */}
-            <p>
-              Professional occupational therapy services to enhance your daily
-              living skills.
-            </p>
-          </div>
-          <div className="home-page-service">
-            <h2>Bodywork and Herbs</h2>
-            {/* Add an icon or image here if desired */}
-            <p>
-              Natural remedies and therapies to promote healing and relaxation.
-            </p>
+        <section
+          id="services"
+          className={styles.homePageServices}
+          aria-labelledby="services-heading"
+        >
+          <div className={styles.container}>
+            <h2 id="services-heading">Our Services</h2>
+            <div className={styles.serviceGrid}>
+              {/* Growth and Development Service */}
+              <Link
+                to="/growth-and-development"
+                className={styles.homePageService}
+                aria-label="Growth and Development Service"
+              >
+                <div>
+                  <h3>Growth and Development</h3>
+                  <p>
+                    Enhance daily living skills through tailored occupational
+                    therapy interventions that address individual needs.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Health and Wellness Service */}
+              <Link
+                to="/health-and-wellness"
+                className={styles.homePageService}
+                aria-label="Health and Wellness Service"
+              >
+                <div>
+                  <h3>Health and Wellness</h3>
+                  <p>
+                    Natural remedies and bodywork therapies designed to promote
+                    healing, relaxation, and holistic well-being.
+                  </p>
+                </div>
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="home-page-contact">
-          <h2>Contact Us</h2>
-          <p>
-            Email:{" "}
-            <a href="mailto:appointmentsbymimi@gmail.com">
-              appointmentsbymimi@gmail.com
-            </a>
-          </p>
-          <p>
-            Text: <a href="tel:+18454459230">(845) 445-9230</a>
-          </p>
+        <section
+          id="contact"
+          className={styles.homePageContact}
+          aria-labelledby="contact-heading"
+        >
+          <div className={styles.container}>
+            <h2 id="contact-heading">Contact Us</h2>
+            <p>
+              Email:{" "}
+              <a href="mailto:appointmentsbymimi@gmail.com">
+                appointmentsbymimi@gmail.com
+              </a>
+            </p>
+            <p>
+              Text: <a href="tel:+18454459230">(845) 445-9230</a>
+            </p>
+          </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="home-page-footer">
-        <p>&copy; {new Date().getFullYear()} Roots. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

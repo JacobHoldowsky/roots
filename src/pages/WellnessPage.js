@@ -1,6 +1,5 @@
-// src/pages/Page.js
 import React from "react";
-import "./WellnessPage.css";
+import styles from "./WellnessPage.module.css"; // Using CSS module
 import cstImage from "../assets/cst.png"; // Replace with actual image paths
 import mnriImage from "../assets/mnri.png";
 import visceralImage from "../assets/visceral.png";
@@ -35,161 +34,150 @@ import visceralLogo2 from "../assets/visceralCertificate2.png";
 
 const HealthAndWellnessPage = () => {
   return (
-    <div className="health-wellness-page">
+    <div className={styles.healthWellnessPage}>
       {/* WHO Section */}
-      <section className="who-section">
-        <h1>Can You Identify with Any of These?</h1>
-        <div className="issues-list">
-          <div className="issue-item">
-            <h2>Muscular/Skeletal Problems</h2>
-            <p>
-              For example: Torticollis, pre/post tongue tie release, back pain,
-              flat feet, scoliosis, postural asymmetry.
-            </p>
-          </div>
-          <div className="issue-item">
-            <h2>Poor Immune System</h2>
-            <p>For example: Ear infections, eczema.</p>
-          </div>
-          <div className="issue-item">
-            <h2>Nervous System Dysregulation</h2>
-            <p>For example: Stress, decreased attention/focus, sleep issues.</p>
-          </div>
-          <div className="issue-item">
-            <h2>Women’s Health Concerns/Hormonal Imbalance</h2>
-            <p>For example: PMS, PCOS.</p>
-          </div>
-          <div className="issue-item">
-            <h2>Digestive Issues</h2>
-            <p>For example: Reflux, constipation.</p>
-          </div>
-          <div className="issue-item">
-            <h2>Any Other Physical Concerns</h2>
-            <p>For example: Bedwetting.</p>
-          </div>
+      <section className={styles.section}>
+        <h1>Health & Wellness</h1>
+        <h2>Can You Identify with Any of These?</h2>
+        <div className={styles.issuesList}>
+          {[
+            {
+              title: "Muscular/Skeletal Problems",
+              description:
+                "For example: Torticollis, pre/post tongue tie release, back pain, flat feet, scoliosis, postural asymmetry.",
+            },
+            {
+              title: "Poor Immune System",
+              description: "For example: Ear infections, eczema.",
+            },
+            {
+              title: "Nervous System Dysregulation",
+              description:
+                "For example: Stress, decreased attention/focus, sleep issues.",
+            },
+            {
+              title: "Women’s Health Concerns/Hormonal Imbalance",
+              description: "For example: PMS, PCOS.",
+            },
+            {
+              title: "Digestive Issues",
+              description: "For example: Reflux, constipation.",
+            },
+            {
+              title: "Any Other Physical Concerns",
+              description: "For example: Bedwetting.",
+            },
+          ].map((issue, index) => (
+            <div className={styles.issueItem} key={index}>
+              <h3>{issue.title}</h3>
+              <p>{issue.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* WHAT Section */}
-      <section className="what-section">
-        <h1>
+      <section className={styles.section}>
+        <h2>
           Treating Women, Infants, and Children through Bodywork and Herbs
-        </h1>
-        <div className="treatment-methods">
-          <div className="method-item">
-            <img src={cstImage} alt="Craniosacral Therapy" />
-            <h2>Craniosacral Therapy (CST)</h2>
-            <p>
-              Craniosacral therapy is a gentle, hands-on approach that works
-              with the craniosacral system, which includes the membranes and
-              cerebrospinal fluid that surround the brain and spinal cord...
-              <a
-                href="https://www.upledger.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                (see more)
-              </a>
-            </p>
-          </div>
-          <div className="method-item">
-            <img src={mnriImage} alt="MNRI (Reflex Integration)" />
-            <h2>MNRI (Reflex Integration)</h2>
-            <p>
-              MNRI is a therapeutic approach focusing on the integration and
-              remediation of reflex patterns in the nervous system...
-              <a
-                href="https://masgutovamethod.com/the-method/the-mnri-method-approach-program"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                (see more)
-              </a>
-            </p>
-          </div>
-          <div className="method-item">
-            <img src={visceralImage} alt="Visceral Manipulation" />
-            <h2>Visceral Manipulation</h2>
-            <p>
-              Visceral manipulation is a gentle manual therapy technique focused
-              on improving the mobility and function of internal organs...
-              <a
-                href="https://www.barralinstitute.com/therapies/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                (see more)
-              </a>
-            </p>
-          </div>
-          <div className="method-item">
-            <img src={raindropImage} alt="Raindrop Technique" />
-            <h2>Raindrop Technique</h2>
-            <p>
-              The Raindrop Technique is an aromatherapy treatment, where
-              essential oils are dripped onto the spine and feet, then massaged
-              in...
-              <a
-                href="https://www.youngliving.com/us/en/learn/raindrop-technique"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                (see more)
-              </a>
-            </p>
-          </div>
-          <div className="method-item">
-            <img src={herbalImage} alt="Custom Herbal Formulations" />
-            <h2>Custom Herbal Formulations and Supplements</h2>
-            <p>
-              A custom herbal formula is personalized to your specific health
-              needs, considering factors like medical history, current symptoms,
-              as well as your individual constitutional tendencies.
-            </p>
-          </div>
+        </h2>
+        <div className={styles.treatmentMethods}>
+          {[
+            {
+              image: cstImage,
+              title: "Craniosacral Therapy (CST)",
+              description:
+                "Craniosacral therapy is a gentle, hands-on approach that works with the craniosacral system...",
+              link: "https://www.upledger.com/",
+            },
+            {
+              image: mnriImage,
+              title: "MNRI (Reflex Integration)",
+              description:
+                "MNRI is a therapeutic approach focusing on the integration and remediation of reflex patterns...",
+              link: "https://masgutovamethod.com/the-method/the-mnri-method-approach-program",
+            },
+            {
+              image: visceralImage,
+              title: "Visceral Manipulation",
+              description:
+                "Visceral manipulation is a gentle manual therapy technique focused on improving the mobility and function of internal organs...",
+              link: "https://www.barralinstitute.com/therapies/",
+            },
+            {
+              image: raindropImage,
+              title: "Raindrop Technique",
+              description:
+                "The Raindrop Technique is an aromatherapy treatment, where essential oils are dripped onto the spine and feet...",
+              link: "https://www.youngliving.com/us/en/learn/raindrop-technique",
+            },
+            {
+              image: herbalImage,
+              title: "Custom Herbal Formulations and Supplements",
+              description:
+                "A custom herbal formula is personalized to your specific health needs, considering medical history, symptoms, and individual constitutional tendencies.",
+            },
+          ].map((method, index) => (
+            <div className={styles.methodItem} key={index}>
+              <img src={method.image} alt={method.title} />
+              <h3>{method.title}</h3>
+              <p>
+                {method.description}
+                {method.link && (
+                  <a
+                    href={method.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {" "}
+                    (see more)
+                  </a>
+                )}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Banner of Certificates */}
-      <section className="certificates-section">
-        <h1>Our Credentials and Certifications</h1>
-        <div className="certificates-banner">
-          <img src={mnriLogo} alt="MNRI Certification" />
-          <img src={mnriLogo2} alt="MNRI Certification 2" />
-          <img src={mnriLogo3} alt="MNRI Certification 3" />
-          <img src={mnriLogo4} alt="MNRI Certification 4" />
-          <img src={mnriLogo5} alt="MNRI Certification 5" />
-          <img src={mnriLogo6} alt="MNRI Certification 6" />
-          <img src={mnriLogo7} alt="MNRI Certification 7" />
-          <img src={mnriLogo8} alt="MNRI Certification 8" />
-          <img src={mnriLogo9} alt="MNRI Certification 9" />
-          <img src={mnriLogo10} alt="MNRI Certification 10" />
-          <img src={mnriLogo11} alt="MNRI Certification 11" />
-          <img src={mnriLogo12} alt="MNRI Certification 12" />
-          <img src={mnriLogo13} alt="MNRI Certification 13" />
-          <img src={mnriLogo14} alt="MNRI Certification 14" />
-          <img src={mnriLogo15} alt="MNRI Certification 15" />
-          <img src={mnriLogo16} alt="MNRI Certification 16" />
-          <img src={mnriLogo17} alt="MNRI Certification 17" />
-          <img src={mnriLogo18} alt="MNRI Certification 18" />
-          <img src={mnriLogo19} alt="MNRI Certification 19" />
-          <img src={mnriLogo20} alt="MNRI Certification 20" />
-          <img src={mnriLogo21} alt="MNRI Certification 21" />
-          <img src={rmtLogo} alt="RMT Certification" />
-          <img src={visceralLogo} alt="Visceral Certification" />
-          <img src={visceralLogo2} alt="Visceral Certification 2" />
-          <img src={cstLogo} alt="CST Certification" />
-          <img src={cstLogo2} alt="CST Certification 2" />
-          {/* Add more logos as needed */}
+      {/* Certificates Section */}
+      <section className={styles.section}>
+        <h2>Our Credentials and Certifications</h2>
+        <div className={styles.certificatesBanner}>
+          {[
+            mnriLogo,
+            mnriLogo2,
+            mnriLogo3,
+            mnriLogo4,
+            mnriLogo5,
+            mnriLogo6,
+            mnriLogo7,
+            mnriLogo8,
+            mnriLogo9,
+            mnriLogo10,
+            mnriLogo11,
+            mnriLogo12,
+            mnriLogo13,
+            mnriLogo14,
+            mnriLogo15,
+            mnriLogo16,
+            mnriLogo17,
+            mnriLogo18,
+            mnriLogo19,
+            mnriLogo20,
+            mnriLogo21,
+            rmtLogo,
+            visceralLogo,
+            visceralLogo2,
+            cstLogo,
+            cstLogo2,
+          ].map((logo, index) => (
+            <img src={logo} alt={`Certification ${index}`} key={index} />
+          ))}
         </div>
       </section>
 
-      {/* Recommended Resources Section */}
-      <section className="resources-section">
+      {/* Resources Section */}
+      <section className={styles.section}>
         <h2>Roots Approved Recommended Resources</h2>
         <p>
           <a
@@ -203,8 +191,8 @@ const HealthAndWellnessPage = () => {
       </section>
 
       {/* HOW Section */}
-      <section className="how-section">
-        <h1>How to Get Started</h1>
+      <section className={styles.section}>
+        <h2>How to Get Started</h2>
         <p>
           Contact Roots to schedule your initial appointment. Please include the
           reason for your visit and specify whether you are interested in
@@ -213,7 +201,7 @@ const HealthAndWellnessPage = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="contact-info">
+      <section className={styles.contactInfo}>
         <h2>Contact Roots</h2>
         <p>Please reach out through text/email.</p>
         <p>

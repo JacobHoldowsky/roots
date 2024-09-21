@@ -1,0 +1,204 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* CSS Variables for Consistency */
+:root {
+  --primary-color: #5A4E8C; /* A deeper, more professional purple */
+  --secondary-color: #E07A5F; /* A muted, elegant orange */
+  --text-color: #2D2D2D;
+  --background-color: #F9F9F9;
+  --light-gray: #E5E5E5;
+  --font-family: 'Open Sans', sans-serif;
+  --heading-font-family: 'Montserrat', sans-serif;
+  --transition-duration: 0.3s;
+  --shadow-primary: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset Styles (Scoped) */
+.homePage * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the root element */
+.homePage {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  scroll-behavior: smooth; /* Smooth scroll scoped to HomePage */
+}
+
+/* Hero Section */
+.homePageHero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url('../assets/therapy.webp'); /* Optional background image */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  font-family: var(--heading-font-family);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+}
+
+.btnPrimary {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #ffffff !important;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color var(--transition-duration), transform 0.2s ease;
+}
+
+.btnPrimary:hover {
+  background-color: #cc6b55; /* Darker shade of secondary color */
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.homePageServices {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.homePageServices h2 {
+  font-size: 2.75rem;
+  margin-bottom: 60px;
+  font-family: var(--heading-font-family);
+  color: var(--primary-color);
+}
+
+.serviceGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.homePageService {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  flex: 1 1 320px;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: var(--shadow-primary);
+  transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+  text-decoration: none;
+  color: inherit;
+}
+
+.homePageService:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.homePageService h3 {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  font-family: var(--heading-font-family);
+}
+
+.homePageService p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.homePageContact {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.homePageContact h2 {
+  font-size: 2.75rem;
+  margin-bottom: 30px;
+  font-family: var(--heading-font-family);
+}
+
+.homePageContact p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.homePageContact a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Footer */
+.homePageFooter {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.homePageFooter a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.homePageFooter a:hover {
+  color: #e07a5f;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+
+  .serviceGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homePageService {
+    max-width: 90%;
+  }
+}

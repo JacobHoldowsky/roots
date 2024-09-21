@@ -1,36 +1,15 @@
-// src/pages/AboutPage.js
 import React, { useState } from "react";
-import Slider from "react-slick";
-import "./AboutPage.css";
-import mimiImage from "../assets/logo.png";
+import TrainingBanner from "../components/TrainingBanner.js";
+import styles from "./AboutPage.module.css";
+import mimiImage from "../assets/logo.png"; // Replace with actual image paths
 import mnriLogo from "../assets/logo.png";
 import rmtLogo from "../assets/logo.png";
 import tomatisLogo from "../assets/logo.png";
-// Add more logos as needed
 
 const AboutPage = () => {
   const [showMoreRootsHealth, setShowMoreRootsHealth] = useState(false);
   const [showMoreAboutMimi, setShowMoreAboutMimi] = useState(false);
   const [showMoreTestimonials, setShowMoreTestimonials] = useState({});
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   // Handle "see more" toggles
   const toggleSeeMoreRootsHealth = () => {
@@ -49,17 +28,17 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="about-page">
+    <div className={styles.aboutPage}>
       {/* About Roots Section */}
-      <section className="about-section about-roots">
+      <section className={`${styles.aboutSection} ${styles.aboutRoots}`}>
         <h1>About Roots</h1>
         <p>
           Roots is a therapy practice dedicated to helping women, infants, and
           children through therapeutic interventions and consulting services.
           Roots consists of two divisions:
         </p>
-        <div className="about-roots-content">
-          <div className="roots-growth">
+        <div className={styles.aboutRootsContent}>
+          <div className={styles.rootsItem}>
             <h2>Roots for Growth and Development</h2>
             <p>
               Focuses on issues related to developmental delays,
@@ -70,7 +49,7 @@ const AboutPage = () => {
               and therapeutic listening programs.
             </p>
           </div>
-          <div className="roots-health">
+          <div className={styles.rootsItem}>
             <h2>Roots for Health and Wellness</h2>
             <p>
               Focuses on issues related to the musculoskeletal system, immune
@@ -79,7 +58,10 @@ const AboutPage = () => {
               bodywork methods and custom herbal formulations and supplements.
             </p>
             {!showMoreRootsHealth && (
-              <button className="btn-toggle" onClick={toggleSeeMoreRootsHealth}>
+              <button
+                className={styles.btnToggle}
+                onClick={toggleSeeMoreRootsHealth}
+              >
                 See more
               </button>
             )}
@@ -92,7 +74,7 @@ const AboutPage = () => {
                   we help clients achieve better overall health outcomes.
                 </p>
                 <button
-                  className="btn-toggle"
+                  className={styles.btnToggle}
                   onClick={toggleSeeMoreRootsHealth}
                 >
                   See less
@@ -104,58 +86,96 @@ const AboutPage = () => {
       </section>
 
       {/* About Mimi Section */}
-      <section className="about-section about-mimi">
-        <div className="about-mimi-content">
-          <h2>About Mimi</h2>
-          <p>
-            Treatment rooted in education, experience, and empathy. Since
-            graduating from Downstate Medical Center’s occupational therapy
-            program in 2010, Mimi continues to learn techniques to broaden her
-            skills within traditional occupational therapy and beyond...
-          </p>
-          {!showMoreAboutMimi && (
-            <button className="btn-toggle" onClick={toggleSeeMoreAboutMimi}>
-              See more
-            </button>
-          )}
-          {showMoreAboutMimi && (
-            <div>
-              <p>
-                Mimi seeks to understand the whole person and get to the root of
-                the presenting concerns. She has extensive training in sensory
-                motor integration, numerous bodywork modalities including
-                craniosacral therapy and visceral manipulation, MNRI (Level III
-                practitioner), and the Tomatis Listening Program (Level III
-                practitioner). She has also participated in a 2-year program at
-                David Winston’s Center for Herbal Studies.
-              </p>
-              <button className="btn-toggle" onClick={toggleSeeMoreAboutMimi}>
-                See less
+      <section className={`${styles.aboutSection} ${styles.aboutMimi}`}>
+        <div className={styles.aboutMimi}>
+          <div className={styles.aboutMimiContent}>
+            <h2>About Mimi</h2>
+            <p>
+              Since graduating from Downstate Medical Center’s occupational
+              therapy program in 2010, Mimi continues to learn techniques to
+              broaden her skills within traditional occupational therapy and
+              beyond. She seeks to understand the whole person, and get to the
+              root of the presenting concerns. Mimi has extensive training in
+              sensory motor integration, numerous bodywork modalities, including
+              craniosacral therapy and visceral manipulation, MNRI (Level III
+              practitioner), and the Tomatis Listening Program (Level III
+              practitioner). She has also participated in a 2 year program at
+              David Winston’s Center for Herbal Studies.
+            </p>
+            {!showMoreAboutMimi && (
+              <button
+                className={styles.btnToggle}
+                onClick={toggleSeeMoreAboutMimi}
+              >
+                See more
               </button>
-            </div>
-          )}
-        </div>
-        <div className="about-mimi-image">
-          <img src={mimiImage} alt="Mimi" />
+            )}
+            {showMoreAboutMimi && (
+              <div>
+                <p>
+                  Mimi incorporates multiple modalities from her vast training
+                  experiences to help her clients maximize their potential. She
+                  has a broad range of experience in treating clients with a
+                  wide variety of diagnoses and concerns. Mimi’s experience has
+                  led her to support clients and caregivers to take
+                  responsibility for their therapy process, as she believes that
+                  is the key to lasting success. Her role encompasses more than
+                  just a practitioner but an educator, consultant, and guide in
+                  coaching people in their journey towards success. Carry over
+                  home programs of exercises and therapeutic principles are a
+                  mandatory and integral part of the process.
+                </p>
+                <p>
+                  The passion Mimi brings to her work is coupled with a genuine
+                  desire to help people rise above their challenges. Due to her
+                  goal oriented approach, Mimi will help find the necessary
+                  therapeutic interventions, whether is it through the wide
+                  range of modalities she uses or by helping to find another
+                  pracitioner or modality to match one’s needs. Mimi networks
+                  and collaberates with other professionals in related fields
+                  including doctors and specialists, speech language
+                  pathologists, phyiscal therapists, social workers and more in
+                  order to ensure that her clients are getting their needs met.
+                </p>
+                <p>
+                  Although Mimi has developed a successful framework and system
+                  that has proven results throughtout the year, she treats each
+                  client in a unique and individualized way. Taking into account
+                  the clients environment, family dynamics, personality, and
+                  resources, each client gets their own personalized program.
+                </p>
+                <button
+                  className={styles.btnToggle}
+                  onClick={toggleSeeMoreAboutMimi}
+                >
+                  See less
+                </button>
+              </div>
+            )}
+          </div>
+          <div className={styles.aboutMimiImage}>
+            <img src={mimiImage} alt="Mimi" />
+          </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="testimonials">
+      <section className={styles.testimonials}>
         <h2>Hear it from Clients & Professionals</h2>
 
         {/* Testimonial 1 */}
-        <div className="testimonial">
+        <div className={styles.testimonial}>
           <blockquote>
             <p>
               "I am thrilled to recommend Mimi as an exceptional occupational
               therapist who has made a profound impact on my child's life. Her
               exceptional caring nature, vast knowledge, and gentle approach
               have created a safe and nurturing environment for my child to grow
-              and thrive{!showMoreTestimonials["roizy"] ? "..." : "."}
+              and thrive
+              {!showMoreTestimonials["roizy"] ? "..." : "."}
             </p>
             <button
-              className="btn-toggle"
+              className={styles.btnToggle}
               onClick={() => toggleSeeMoreTestimonial("roizy")}
             >
               {showMoreTestimonials["roizy"] ? "See less" : "See more"}
@@ -173,18 +193,7 @@ const AboutPage = () => {
                 <p>
                   Through Mimi’s guidance and support, my daughter has learned
                   how to be happy in her own skin, a gift that will benefit her
-                  for the rest of her life. She has released the weight of her
-                  struggles and has begun to embrace her uniqueness, building
-                  confidence and self-esteem that will continue to grow.
-                </p>
-                <p>
-                  Mimi has helped my daughter release all the steps that once
-                  held her back and has empowered her to take bold steps
-                  forward, embracing life with joy, curiosity, and enthusiasm. I
-                  am grateful for Mimi and the impact she has had on my child's
-                  life. Her expertise, compassion, and dedication make her an
-                  outstanding occupational therapist, and I highly recommend her
-                  to anyone seeking exceptional therapy services."
+                  for the rest of her life.
                 </p>
               </>
             )}
@@ -193,7 +202,7 @@ const AboutPage = () => {
         </div>
 
         {/* Testimonial 2 */}
-        <div className="testimonial">
+        <div className={styles.testimonial}>
           <blockquote>
             <p>
               "Mimi is kind and extremely knowledgeable. She uses various
@@ -207,7 +216,7 @@ const AboutPage = () => {
         </div>
 
         {/* Testimonial 3 */}
-        <div className="testimonial">
+        <div className={styles.testimonial}>
           <blockquote>
             <p>
               "Mimi is currently treating my second child. We saw major
@@ -217,7 +226,7 @@ const AboutPage = () => {
               {!showMoreTestimonials["faiga"] ? "..." : "."}
             </p>
             <button
-              className="btn-toggle"
+              className={styles.btnToggle}
               onClick={() => toggleSeeMoreTestimonial("faiga")}
             >
               {showMoreTestimonials["faiga"] ? "See less" : "See more"}
@@ -242,7 +251,7 @@ const AboutPage = () => {
         </div>
 
         {/* Testimonial 4 */}
-        <div className="testimonial">
+        <div className={styles.testimonial}>
           <blockquote>
             <p>
               "I have observed Mimi in action over the years and am always
@@ -253,7 +262,7 @@ const AboutPage = () => {
               {!showMoreTestimonials["libby"] ? "..." : "."}
             </p>
             <button
-              className="btn-toggle"
+              className={styles.btnToggle}
               onClick={() => toggleSeeMoreTestimonial("libby")}
             >
               {showMoreTestimonials["libby"] ? "See less" : "See more"}
@@ -276,7 +285,7 @@ const AboutPage = () => {
         </div>
 
         {/* Testimonial 5 */}
-        <div className="testimonial">
+        <div className={styles.testimonial}>
           <blockquote>
             <p>
               "Mimi’s commitment to her clients and to helping others is
@@ -291,27 +300,13 @@ const AboutPage = () => {
       </section>
 
       {/* Training and Certifications Slider */}
-      <section className="training-banner">
+      <section className={styles.trainingBanner}>
         <h2>Trained by the Experts</h2>
-        <Slider {...settings} className="banner-slider">
-          <div className="slider-item">
-            <img src={mnriLogo} alt="MNRI Logo" />
-            <p>MNRI Masgutova Neuro-Sensory-Motor Reflex Integration</p>
-          </div>
-          <div className="slider-item">
-            <img src={rmtLogo} alt="RMT Logo" />
-            <p>RMT Rhythmic Movement Training</p>
-          </div>
-          <div className="slider-item">
-            <img src={tomatisLogo} alt="Tomatis Logo" />
-            <p>Tomatis Method (Level 1, 2 & 3)</p>
-          </div>
-          {/* Add more logos and descriptions as needed */}
-        </Slider>
+        <TrainingBanner />
       </section>
 
       {/* Contact Information Section */}
-      <section className="contact-info">
+      <section className={styles.contactInfo}>
         <h2>Contact Roots</h2>
         <p>Please reach out through text or email.</p>
         <p>

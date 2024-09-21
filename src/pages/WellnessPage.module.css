@@ -1,0 +1,179 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* CSS Variables */
+:root {
+  --primary-color: #866aaf; /* Deep professional purple */
+  --secondary-color: #f68c3e; /* Muted elegant orange */
+  --text-color: #2D2D2D;
+  --background-color: #F9F9F9;
+  --light-gray: #E5E5E5;
+  --accent-color: #004d40; /* Teal Color */
+  --font-family: 'Open Sans', sans-serif;
+  --heading-font-family: 'Montserrat', sans-serif;
+  --transition-duration: 0.3s;
+}
+
+/* Page Layout */
+.healthWellnessPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin-top: 50px;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 80px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section h1,
+.section h2 {
+  color: var(--primary-color);
+  font-family: var(--heading-font-family);
+  margin-bottom: 30px;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Issues List */
+.issuesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.issueItem {
+  background-color: var(--light-gray);
+  padding: 30px 20px;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.issueItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.issueItem h3 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.issueItem p {
+  color: var(--text-color);
+}
+
+/* Treatment Methods Section */
+.treatmentMethods {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.methodItem {
+  background-color: var(--light-gray);
+  padding: 40px 30px;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+.methodItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.methodItem img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.methodItem h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.methodItem p {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+/* Certificates Section */
+.certificatesBanner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certificatesBanner img {
+  max-height: 80px;
+  transition: transform var(--transition-duration);
+}
+
+.certificatesBanner img:hover {
+  transform: scale(1.1);
+}
+
+/* Resources Section */
+.resourcesSection p,
+.contactInfo p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.contactInfo a,
+.resourcesSection a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition-duration);
+}
+
+.contactInfo a:hover,
+.resourcesSection a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .issuesList,
+  .treatmentMethods {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 20px;
+  }
+
+  .issueItem,
+  .methodItem {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,133 @@
+/* Root CSS Variables for Consistency */
+:root {
+    --primary-color: #5A4E8C; /* Deep professional purple */
+    --secondary-color: #E07A5F; /* Muted elegant orange */
+    --text-color: #2D2D2D;
+    --background-color: #F9F9F9;
+    --light-gray: #E5E5E5;
+    --font-family: 'Open Sans', sans-serif;
+    --heading-font-family: 'Montserrat', sans-serif;
+    --transition-duration: 0.3s;
+  }
+  
+  /* Overall Contact Page Styling */
+/* Ensure there's space for the sticky header */
+.contact-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    padding-top: 100px; /* Add padding to account for the sticky header */
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+  }
+  
+  /* Form and other styles remain the same */
+  
+  .contact-page h1 {
+    font-family: var(--heading-font-family);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-page p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-status {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    background-color: #fff4e5;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Contact Form Styling */
+  .contact-form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--primary-color);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: border-color var(--transition-duration);
+    background-color: var(--background-color);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .submit-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .submit-btn:hover {
+    background-color: #cc6b55; /* Darker shade of secondary color */
+  }
+  
+  .submit-btn:active {
+    background-color: #b85b48; /* Even darker shade for active state */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-page {
+      padding: 30px 15px;
+    }
+  
+    .form-group label,
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.95rem;
+    }
+  
+    .submit-btn {
+      font-size: 0.95rem;
+      padding: 10px 20px;
+    }
+  }
+  

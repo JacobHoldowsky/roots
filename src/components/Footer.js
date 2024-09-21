@@ -1,6 +1,5 @@
-// src/components/Footer.js
 import React from "react";
-import "./Footer.css"; // Import the CSS file
+import "./Footer.css"; // Import the updated CSS file
 
 const Footer = () => {
   return (
@@ -25,6 +24,7 @@ const Footer = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
             <i className="fab fa-facebook-f"></i>
           </a>
@@ -32,6 +32,7 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <i className="fab fa-instagram"></i>
           </a>
@@ -39,6 +40,7 @@ const Footer = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <i className="fab fa-linkedin-in"></i>
           </a>

@@ -1,0 +1,91 @@
+/* Container for all sections */
+.trainingTickerContainer {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  gap: 0.5rem; /* Small gap between each section */
+}
+
+/* Generic styles for all ticker sections */
+.tickerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222; /* Dark background for each section */
+  padding: 0.25rem 0; /* Minimal padding for compact size */
+  border-top: 1px solid #444;
+}
+
+.tickerSection h3 {
+  font-size: 0.75rem; /* Smaller font size for the section title */
+  color: black;
+  margin-bottom: 0.25rem;
+}
+
+.bannerSlider {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px; /* Small minimum width for slider items */
+  padding: 0 8px; /* Compact padding between items */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sliderItem img {
+  width: 20px; /* Small logo size */
+  margin-right: 5px;
+}
+
+.sliderItem p {
+  font-size: 0.65rem; /* Smaller text size */
+  color: black;
+  margin: 0;
+}
+
+/* Section background colors */
+.reflexIntegration {
+  background-color: #f0f4c3;
+}
+
+.neurodevelopmental {
+  background-color: #ffe082;
+}
+
+.therapeuticListening {
+  background-color: #b3e5fc;
+}
+
+.sensoryIntegration {
+  background-color: #d1c4e9;
+}
+
+.bodywork {
+  background-color: #ffccbc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sliderItem {
+    min-width: 80px; /* Smaller slider items on mobile */
+  }
+
+  .sliderItem img {
+    width: 15px; /* Smaller logos on mobile */
+  }
+
+  .sliderItem p {
+    font-size: 0.55rem; /* Smaller text on mobile */
+  }
+
+  .tickerSection h3 {
+    font-size: 0.65rem; /* Smaller section titles on mobile */
+  }
+}

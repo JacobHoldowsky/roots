@@ -1,100 +1,97 @@
-/* src/components/Header.css */
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* CSS Variables */
-:root {
-  --primary-color: #5A3E85;      /* Deep Purple */
-  --secondary-color: #f68c3e;    /* Coral Red */
-  --text-color: #333333;
-  --background-color: #ffffff;
-  --font-family: 'Poppins', sans-serif;
-}
-
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Header Styles */
 .header {
   background-color: var(--background-color);
   position: fixed;
-  width: 100%;
   top: 0;
+  width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
 }
 
-.header-container {
+/* Container for Header */
+.headerContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.header-logo img {
+/* Logo Styling */
+.headerLogo img {
   max-height: 50px;
+  transition: transform 0.3s ease;
 }
 
-.header-nav {
+.headerLogo img:hover {
+  transform: scale(1.05); /* Subtle hover effect on the logo */
+}
+
+/* Navigation Menu */
+.headerNav {
   display: flex;
   align-items: center;
 }
 
-.header-nav ul {
+.headerNav ul {
   list-style: none;
   display: flex;
   gap: 30px;
 }
 
-.header-nav ul li a {
+/* Navigation Links */
+.headerNav ul li a {
   text-decoration: none;
   color: var(--text-color);
   font-size: 1rem;
-  font-weight: 500;
-  font-family: var(--font-family);
-  transition: color 0.3s ease;
+  font-weight: 600;
+  padding: 10px 15px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.header-nav ul li a:hover {
+.headerNav ul li a:hover {
+  color: var(--primary-color); /* Color change on hover */
+  border-bottom: 2px solid var(--primary-color); /* Underline on hover */
+}
+
+.activeLink {
   color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color); /* Active link underline */
 }
 
-/* Hamburger Menu */
-.header-hamburger {
+/* Hamburger Menu for Mobile */
+.headerHamburger {
   display: none;
   flex-direction: column;
-  cursor: pointer;
   gap: 5px;
+  cursor: pointer;
 }
 
-.header-hamburger .bar {
+.headerHamburger .bar {
   width: 25px;
   height: 3px;
   background-color: var(--text-color);
   transition: all 0.3s ease;
 }
 
-.hamburger-active .bar:nth-child(2) {
+/* Hamburger Animation */
+.hamburgerActive .bar:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger-active .bar:nth-child(1) {
+.hamburgerActive .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.hamburger-active .bar:nth-child(3) {
+.hamburgerActive .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile Menu */
+/* Mobile Menu Styling */
 @media (max-width: 768px) {
-  .header-nav {
+  .headerNav {
     position: fixed;
     top: 70px;
     left: -100%;
@@ -105,18 +102,19 @@
     justify-content: center;
     align-items: center;
     transition: left 0.3s ease;
+    z-index: 999;
   }
 
-  .header-nav.nav-active {
+  .navActive {
     left: 0;
   }
 
-  .header-nav ul {
+  .headerNav ul {
     flex-direction: column;
     gap: 20px;
   }
 
-  .header-hamburger {
+  .headerHamburger {
     display: flex;
   }
 }
