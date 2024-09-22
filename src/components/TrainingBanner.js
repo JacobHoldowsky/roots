@@ -12,14 +12,14 @@ const TrainingBanner = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 12000, // Faster scroll speed
-    slidesToShow: 2, // Show one at a time to mimic continuous scrolling
-    slidesToScroll: 1,
+    speed: 15000, // Faster scroll speed
+    slidesToShow: 1, // Show only one at a time
+    slidesToScroll: 2, // Scroll one slide at a time
     autoplay: true,
     autoplaySpeed: 0, // No pauses, continuous scrolling
     cssEase: "linear", // Continuous linear scrolling
-    arrows: false, // Remove navigation arrows
-    pauseOnHover: false, // Keep it moving even when hovered
+    arrows: false,
+    pauseOnHover: false,
   };
 
   return (
@@ -147,7 +147,6 @@ const TrainingBanner = () => {
           </div>
           <div className={styles.sliderItem}>
             <p>
-              {" "}
               Identifying & Correcting Anatomical, Digestive, & Breastfeeding
               Pathologies in Infants with CST and Focused Connective Tissue Work
             </p>

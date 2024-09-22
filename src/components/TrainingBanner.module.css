@@ -2,7 +2,10 @@
 .trainingTickerContainer {
   display: flex;
   flex-direction: column; /* Stack sections vertically */
-  gap: 0.5rem; /* Small gap between each section */
+  gap: 1rem; /* Increase the gap for more breathing room */
+  max-width: 500px; /* Set a maximum width of 500px */
+  margin: 0 auto; /* Center the container horizontally */
+  font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font */
 }
 
 /* Generic styles for all ticker sections */
@@ -11,15 +14,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #222; /* Dark background for each section */
-  padding: 0.25rem 0; /* Minimal padding for compact size */
-  border-top: 1px solid #444;
+  background-color: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: none;
+  overflow: hidden; /* Ensure no overflow occurs */
 }
 
 .tickerSection h3 {
-  font-size: 0.75rem; /* Smaller font size for the section title */
-  color: black;
-  margin-bottom: 0.25rem;
+  font-size: 1rem; /* Slightly larger font size */
+  color: #333; /* Use a modern dark gray color */
+  font-weight: 700; /* Bold for emphasis */
+  margin-bottom: 0.5rem; /* Give space below the header */
+  text-transform: uppercase; /* Uppercase for modern typography style */
+  letter-spacing: 1px; /* Slight letter spacing */
 }
 
 .bannerSlider {
@@ -30,45 +39,57 @@
   justify-content: center;
 }
 
+/* Slider items */
 .sliderItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px; /* Small minimum width for slider items */
-  padding: 0 8px; /* Compact padding between items */
-  white-space: nowrap; /* Prevent text from wrapping */
-}
-
-.sliderItem img {
-  width: 20px; /* Small logo size */
-  margin-right: 5px;
+  min-width: 100%; /* Ensure each slider item takes the full width */
+  max-width: 100%;
+  padding: 0 10px;
+  white-space: normal; /* Allow text to wrap to the next line */
+  text-align: center;
 }
 
 .sliderItem p {
-  font-size: 0.65rem; /* Smaller text size */
-  color: black;
+  font-size: 0.75rem; /* Font size to keep it readable */
+  color: #555;
   margin: 0;
+  max-width: 90%; /* Control the width to avoid stretching */
+  word-wrap: break-word; /* Ensure words break appropriately */
 }
 
-/* Section background colors */
+
+.sliderItem img {
+  width: 24px; /* Slightly larger logos */
+  margin-right: 10px; /* Add more space between logo and text */
+}
+
+/* Modern background colors */
 .reflexIntegration {
-  background-color: #f0f4c3;
+  background: linear-gradient(45deg, #f9fbe7, #dce775); /* Light green gradient */
 }
 
 .neurodevelopmental {
-  background-color: #ffe082;
+  background: linear-gradient(45deg, #fff8e1, #ffcc80); /* Soft orange gradient */
 }
 
 .therapeuticListening {
-  background-color: #b3e5fc;
+  background: linear-gradient(45deg, #e1f5fe, #81d4fa); /* Light blue gradient */
 }
 
 .sensoryIntegration {
-  background-color: #d1c4e9;
+  background: linear-gradient(45deg, #ede7f6, #9575cd); /* Purple gradient */
 }
 
 .bodywork {
-  background-color: #ffccbc;
+  background: linear-gradient(45deg, #fbe9e7, #ffab91); /* Light red gradient */
+}
+
+/* Hover effects for modern interaction */
+.sliderItem:hover {
+  transform: scale(1.05); /* Slight scaling on hover */
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
 }
 
 /* Responsive adjustments */
@@ -78,14 +99,14 @@
   }
 
   .sliderItem img {
-    width: 15px; /* Smaller logos on mobile */
+    width: 18px; /* Smaller logos on mobile */
   }
 
   .sliderItem p {
-    font-size: 0.55rem; /* Smaller text on mobile */
+    font-size: 0.65rem; /* Smaller text on mobile */
   }
 
   .tickerSection h3 {
-    font-size: 0.65rem; /* Smaller section titles on mobile */
+    font-size: 0.85rem; /* Smaller section titles on mobile */
   }
 }
