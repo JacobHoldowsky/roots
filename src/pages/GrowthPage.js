@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./GrowthPage.module.css";
-import sensoryImage from "../assets/logo.png"; // Replace with actual images
-import motorPlanningImage from "../assets/logo.png";
 import reflexIntegrationImage from "../assets/logo.png";
+import sensoryRegulation from "../assets/sensoryRegulation.webp";
+import developmentalDelays from "../assets/developmentalDelays.webp";
+import motorPlanning from "../assets/motorPlanning.webp";
+import auditoryProcessing from "../assets/auditoryProcessing.webp";
+import learningDifficulties from "../assets/learningDifficulties.webp";
+import visualProcessing from "../assets/visualProcessing.webp";
 import tomatisLogo from "../assets/logo.png";
 import mnriLogo from "../assets/logo.png";
 import rmtLogo from "../assets/logo.png";
@@ -19,21 +23,35 @@ const GrowthAndDevelopmentPage = () => {
         <div className={styles.challenges}>
           {[
             {
-              image: sensoryImage,
+              image: sensoryRegulation,
               alt: "Sensory Regulation",
               description:
                 "Sensory regulation, sensory defensive/sensory seeking",
             },
             {
-              image: motorPlanningImage,
+              image: developmentalDelays,
               alt: "Developmental Delays",
-              description: "Developmental delays, motor planning/coordination",
+              description: "Developmental delays",
             },
             {
-              image: reflexIntegrationImage,
+              image: motorPlanning,
+              alt: "Motor planning/coordination",
+              description: "Motor planning/coordination",
+            },
+            {
+              image: learningDifficulties,
               alt: "Learning Difficulties",
-              description:
-                "Learning difficulties (body-based), auditory processing, visual processing",
+              description: "Learning difficulties (body-based)",
+            },
+            {
+              image: auditoryProcessing,
+              alt: "Auditory processing",
+              description: "Auditory processing",
+            },
+            {
+              image: visualProcessing,
+              alt: "Visual processing",
+              description: "Visual processing",
             },
           ].map((challenge, index) => (
             <div className={styles.challengeItem} key={index}>
