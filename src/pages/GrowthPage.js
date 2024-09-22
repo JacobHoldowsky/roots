@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./GrowthPage.module.css";
 import reflexIntegrationImage from "../assets/logo.png";
 import sensoryRegulation from "../assets/sensoryRegulation.webp";
@@ -12,6 +12,51 @@ import mnriLogo from "../assets/logo.png";
 import rmtLogo from "../assets/logo.png";
 
 const GrowthAndDevelopmentPage = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpanded = (index) => {
+    setExpandedIndex(index === expandedIndex ? null : index);
+  };
+
+  const therapyServices = [
+    {
+      title: "Sensory Processing and Integration",
+      description: `Sensory processing and integration is the brain's ability to receive, organize, 
+      and interpret sensory information from the environment and the body. This process allows individuals 
+      to make sense of and respond appropriately to sensory inputs like touch, sound, sight, taste, and movement. 
+      Challenges in sensory processing can lead to difficulties in daily functioning, behavior, and social participation.`,
+      extendedDescription: `Effective sensory integration helps with daily functioning, coordination, and interaction with the world. 
+      When sensory processing is disrupted, it can lead to difficulties in behavior, attention, learning, and motor skills, 
+      impacting one's overall quality of life.`,
+      link: "https://www.spdstar.org/basic/sensory-processing-disorder",
+    },
+    {
+      title: "Reflex Integration",
+      description: `MNRI Masgutova Neurosensory Motor Reflex Integration is a therapeutic approach 
+      focusing on the integration and remediation of reflex patterns in the nervous system. 
+      It addresses developmental and neurological challenges by working with reflexes that aren’t 
+      properly integrated.`,
+      extendedDescription: `This therapy can impact aspects of motor, sensory, emotional, and cognitive functions. 
+      RMT (Rhythmic Movement Training) is also used to stimulate neural pathways through gentle movements, promoting 
+      learning, emotional balance, and ease of movement. These methods are effective for issues like ADD/ADHD, autism, 
+      learning challenges, and emotional imbalances.`,
+      link: "https://masgutovamethod.com/the-method/the-mnri-method-approach-program",
+      additionalLink: "https://rhythmicmovement.org/",
+    },
+    {
+      title: "Therapeutic Listening Programs",
+      description: `The Tomatis Method offers a revolutionary approach to enhancing auditory processing 
+      and communication skills through specialized listening techniques.`,
+      extendedDescription: `Through its unique Electronic Ear device, which combines air and bone conduction, 
+      the Tomatis Method not only targets speech and language disorders but also addresses auditory processing difficulties 
+      and enhances emotional regulation. It can help improve learning abilities, attention, and self-confidence. 
+      Integrated Listening Systems (iLS) and Quick Shifts are also used to support sensory integration through specialized 
+      sound therapy techniques.`,
+      link: "https://www.tomatis.com/en",
+      additionalLink: "https://vitalsounds.com/",
+    },
+  ];
+
   return (
     <div className={styles.growthPage}>
       {/* WHO Section */}
@@ -65,28 +110,41 @@ const GrowthAndDevelopmentPage = () => {
 
       {/* WHAT Section */}
       <section className={styles.section}>
-        <h2>What We Provide</h2>
+        <h2>Roots provides occupational therapy with a focus on:</h2>
         <div className={styles.therapyServices}>
-          {[
-            {
-              title: "Sensory Processing and Integration",
-              description:
-                "Sensory processing and integration is the brain's ability to receive, organize, and interpret sensory information from the environment and the body. This process allows individuals to make sense of and respond appropriately to sensory inputs like touch, sound, sight, taste, and movement. Challenges in sensory processing can lead to difficulties in daily functioning, behavior, and social participation. Our approach includes customized sensory diets, therapeutic activities, and environmental modifications to support sensory integration.",
-            },
-            {
-              title: "Reflex Integration",
-              description:
-                "Reflex integration focuses on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that aren’t properly integrated. By helping the body to mature these reflexes, we can promote better motor control, balance, and coordination.",
-            },
-            {
-              title: "Therapeutic Listening Programs",
-              description:
-                "The Tomatis Method offers a revolutionary approach to enhancing auditory processing and communication skills through specialized listening techniques. It not only targets speech and language disorders but also addresses auditory processing difficulties.",
-            },
-          ].map((service, index) => (
+          {therapyServices.map((service, index) => (
             <div className={styles.serviceItem} key={index}>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
+              {expandedIndex === index && (
+                <>
+                  <p>{service.extendedDescription}</p>
+                  {service.additionalLink && (
+                    <a
+                      href={service.additionalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.additionalLink}
+                    >
+                      Learn more about {service.title}
+                    </a>
+                  )}
+                </>
+              )}
+              <button
+                onClick={() => toggleExpanded(index)}
+                className={styles.seeMoreButton}
+              >
+                {expandedIndex === index ? "See less" : "See more"}
+              </button>
+              <a
+                href={service.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.seeMoreLink}
+              >
+                Visit the official page
+              </a>
             </div>
           ))}
         </div>

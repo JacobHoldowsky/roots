@@ -174,12 +174,6 @@ const AboutPage = () => {
               and thrive
               {!showMoreTestimonials["roizy"] ? "..." : "."}
             </p>
-            <button
-              className={styles.btnToggle}
-              onClick={() => toggleSeeMoreTestimonial("roizy")}
-            >
-              {showMoreTestimonials["roizy"] ? "See less" : "See more"}
-            </button>
             {showMoreTestimonials["roizy"] && (
               <>
                 <p>
@@ -197,6 +191,12 @@ const AboutPage = () => {
                 </p>
               </>
             )}
+            <button
+              className={styles.btnToggle}
+              onClick={() => toggleSeeMoreTestimonial("roizy")}
+            >
+              {showMoreTestimonials["roizy"] ? "See less" : "See more"}
+            </button>
             <footer>- Roizy S., Occupational Therapy Client</footer>
           </blockquote>
         </div>
@@ -225,12 +225,7 @@ const AboutPage = () => {
               exactly what each child needs
               {!showMoreTestimonials["faiga"] ? "..." : "."}
             </p>
-            <button
-              className={styles.btnToggle}
-              onClick={() => toggleSeeMoreTestimonial("faiga")}
-            >
-              {showMoreTestimonials["faiga"] ? "See less" : "See more"}
-            </button>
+
             {showMoreTestimonials["faiga"] && (
               <>
                 <p>
@@ -246,6 +241,12 @@ const AboutPage = () => {
                 </p>
               </>
             )}
+            <button
+              className={styles.btnToggle}
+              onClick={() => toggleSeeMoreTestimonial("faiga")}
+            >
+              {showMoreTestimonials["faiga"] ? "See less" : "See more"}
+            </button>
             <footer>- Faiga W., Client</footer>
           </blockquote>
         </div>
@@ -261,12 +262,7 @@ const AboutPage = () => {
               life
               {!showMoreTestimonials["libby"] ? "..." : "."}
             </p>
-            <button
-              className={styles.btnToggle}
-              onClick={() => toggleSeeMoreTestimonial("libby")}
-            >
-              {showMoreTestimonials["libby"] ? "See less" : "See more"}
-            </button>
+
             {showMoreTestimonials["libby"] && (
               <>
                 <p>
@@ -280,6 +276,12 @@ const AboutPage = () => {
                 </p>
               </>
             )}
+            <button
+              className={styles.btnToggle}
+              onClick={() => toggleSeeMoreTestimonial("libby")}
+            >
+              {showMoreTestimonials["libby"] ? "See less" : "See more"}
+            </button>
             <footer>- Libby S., MS-SLP</footer>
           </blockquote>
         </div>

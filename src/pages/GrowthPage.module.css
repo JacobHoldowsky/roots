@@ -205,6 +205,38 @@
   color: #e0d6f5; /* Lighter shade of primary color */
 }
 
+.seeMoreButton {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: background-color var(--transition-duration) ease;
+}
+
+.seeMoreButton:hover {
+  background-color: #cc6b55;}
+
+.seeMoreLink,
+.additionalLink {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seeMoreLink:hover,
+.additionalLink:hover {
+  color: #00332d; /* Darker shade of accent color */
+}
+
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .therapyServices,
