@@ -79,7 +79,8 @@ const HomePage = () => {
           aria-labelledby="contact-heading"
         >
           <div className={styles.container}>
-            <h2 id="contact-heading">Contact Us</h2>
+            <h2 id="contact-heading">Contact Roots</h2>
+            <p>Please reach out through text or email.</p>
             <p>
               Email:{" "}
               <a href="mailto:appointmentsbymimi@gmail.com">

@@ -21,30 +21,23 @@ const GrowthAndDevelopmentPage = () => {
   const therapyServices = [
     {
       title: "Sensory Processing and Integration",
-      description: `Sensory processing and integration is the brain's ability to receive, organize, 
-      and interpret sensory information from the environment and the body. This process allows individuals 
-      to make sense of and respond appropriately to sensory inputs like touch, sound, sight, taste, and movement. 
-      Challenges in sensory processing can lead to difficulties in daily functioning, behavior, and social participation.`,
-      extendedDescription: `Effective sensory integration helps with daily functioning, coordination, and interaction with the world. 
-      When sensory processing is disrupted, it can lead to difficulties in behavior, attention, learning, and motor skills, 
-      impacting one's overall quality of life.`,
+
+      description: `Sensory processing and integration is the brain's ability to receive, organize, and interpret sensory information from the environment and the body.`,
+      extendedDescription: `This process allows individuals to make sense of and respond appropriately to sensory inputs like touch, sound, sight, taste, and movement. Effective sensory integration helps with daily functioning, coordination, and interaction with the world. When sensory processing is disrupted, it can lead to difficulties in behavior, attention, learning and motor skills, impacting one's overall quality of life.`,
       link: "https://www.spdstar.org/basic/sensory-processing-disorder",
     },
     {
       title: "Reflex Integration",
-      description: `MNRI Masgutova Neurosensory Motor Reflex Integration is a therapeutic approach 
-      focusing on the integration and remediation of reflex patterns in the nervous system. 
-      It addresses developmental and neurological challenges by working with reflexes that aren’t 
-      properly integrated.`,
-      extendedDescription: `This therapy can impact aspects of motor, sensory, emotional, and cognitive functions. 
-      RMT (Rhythmic Movement Training) is also used to stimulate neural pathways through gentle movements, promoting 
-      learning, emotional balance, and ease of movement. These methods are effective for issues like ADD/ADHD, autism, 
-      learning challenges, and emotional imbalances.`,
+      subtitle: "(Including MNRI,  RMT, and others)  ",
+      description: `MNRI Masgutova Neurosensory Motor Reflex Integration is a therapeutic approach focusing on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that aren’t properly integrated. This can impact aspects of motor, sensory, emotional, and cognitive functions.`,
+      extendedDescription: `RMT  Rhythmic Movement Training is an approach that uses gentle rocking and reflex integration movements that stimulate neural pathways and promote learning, emotional balance and ease of movement. RMTi is an effective way to help with symptoms of ADD/ADHD, learning challenges, autism and behavioral/emotional imbalances without the use of drugs.`,
       link: "https://masgutovamethod.com/the-method/the-mnri-method-approach-program",
       additionalLink: "https://rhythmicmovement.org/",
     },
     {
       title: "Therapeutic Listening Programs",
+      subtitle:
+        "(Including Tomatis Listening Program, Integrated Listening Systems, & Quick Shifts)",
       description: `The Tomatis Method offers a revolutionary approach to enhancing auditory processing 
       and communication skills through specialized listening techniques.`,
       extendedDescription: `Through its unique Electronic Ear device, which combines air and bone conduction, 
@@ -115,20 +108,35 @@ const GrowthAndDevelopmentPage = () => {
           {therapyServices.map((service, index) => (
             <div className={styles.serviceItem} key={index}>
               <h3>{service.title}</h3>
+              <h4>{service.subtitle}</h4>
               <p>{service.description}</p>
+
               {expandedIndex === index && (
                 <>
                   <p>{service.extendedDescription}</p>
-                  {service.additionalLink && (
-                    <a
-                      href={service.additionalLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.additionalLink}
-                    >
-                      Learn more about {service.title}
-                    </a>
-                  )}
+                  <p>
+                    To learn more, please visit:
+                    {service.link && (
+                      <a
+                        href={service.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.additionalLink}
+                      >
+                        {service.link}
+                      </a>
+                    )}
+                    {service.additionalLink && (
+                      <a
+                        href={service.additionalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.additionalLink}
+                      >
+                        {service.additionalLink}
+                      </a>
+                    )}
+                  </p>
                 </>
               )}
               <button
@@ -137,14 +145,6 @@ const GrowthAndDevelopmentPage = () => {
               >
                 {expandedIndex === index ? "See less" : "See more"}
               </button>
-              <a
-                href={service.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.seeMoreLink}
-              >
-                Visit the official page
-              </a>
             </div>
           ))}
         </div>
@@ -152,25 +152,32 @@ const GrowthAndDevelopmentPage = () => {
 
       {/* HOW Section */}
       <section className={styles.section}>
-        <h2>How to Get Started</h2>
+        <h2>How do you get started with the therapy process?</h2>
         <p>
-          Contact Roots to set up a complimentary phone call (10 minutes).
-          During the call, you will have the opportunity to express your
-          concerns, followed by guidance on how to proceed.
+          Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to set
+          up a complimentary phone call (10 minutes). During the call, you will
+          have the opportunity to express your concerns, followed by guidance on
+          how to proceed.
         </p>
         <h3>Evaluation</h3>
+        <p>(60-90 minutes)</p>
         <p>
           The purpose of the evaluation is to gather pertinent background
           information via parent interview, clinical observation, as well as
-          informal and formal assessment tools. A post-evaluation follow-up call
-          is included.
+          informal and formal assessment tools. Included in the evaluation fee
+          is a follow up phone call. During this call, the evaluation findings,
+          goals, and recommended treatment plan will be reviewed and you will
+          have the opportunity to ask questions about the process.
         </p>
         <h3>Treatment</h3>
         <p>
-          Based on your individualized needs, an appropriate program is
-          recommended. At Roots, a large focus is placed on creating a practical
-          carryover program to implement at home. Parents are expected to work
-          with their children on activities and strategies between sessions.
+          Based on the your individualized needs. Each client is looked at
+          individually and an appropriate program is recommended based on your
+          unique profile. At roots, a large focus is placed on creating a
+          practical carryover program to implement at home. Parents are expected
+          to work with your children on activities and strategies between
+          sessions. This helps strengthen the skills that are being built in
+          therapy.
         </p>
       </section>
 
@@ -196,6 +203,15 @@ const GrowthAndDevelopmentPage = () => {
             text: "Roots Recommended Resources - OT Books",
             link: "https://www.amazon.com/hz/wishlist/ls/3VB13SV25IIVH?ref_=wl_share",
           },
+        ].map((resource, index) => (
+          <p key={index}>
+            <a href={resource.link} target="_blank" rel="noopener noreferrer">
+              {resource.text}
+            </a>
+          </p>
+        ))}
+        <h2>Other Roots Approved Recommended Resources</h2>
+        {[
           {
             text: "Forbrain (Use affiliate code 3A9905119 for 10% off)",
             link: "https://www.forbrain.com/",
