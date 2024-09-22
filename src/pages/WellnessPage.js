@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./WellnessPage.module.css"; // Using CSS module
 import craniosacralWork from "../assets/craniosacralWork.webp"; // Replace with actual image paths
 import MNRI from "../assets/MNRI.webp";
@@ -26,7 +26,6 @@ import mnriLogo18 from "../assets/MNRI18.png";
 import mnriLogo19 from "../assets/MNRI19.png";
 import mnriLogo20 from "../assets/MNRI20.png";
 import mnriLogo21 from "../assets/MNRI21.png";
-import rmtLogo from "../assets/logo.png";
 import cstLogo from "../assets/cstCertificate.png";
 import cstLogo2 from "../assets/cstCertificate2.png";
 import visceralLogo from "../assets/visceralCertificate.png";
@@ -37,8 +36,100 @@ import nervousSystemDysregulation from "../assets/nervousSystemDysregulation.web
 import womensHealth from "../assets/womensHealth.webp";
 import digestiveIssues from "../assets/digestiveIssues.webp";
 import otherPhysicalConcerns from "../assets/otherPhysicalConcerns.webp";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+const certificates = [
+  mnriLogo,
+  mnriLogo2,
+  mnriLogo3,
+  mnriLogo4,
+  mnriLogo5,
+  mnriLogo6,
+  mnriLogo7,
+  mnriLogo8,
+  mnriLogo9,
+  mnriLogo10,
+  mnriLogo11,
+  mnriLogo12,
+  mnriLogo13,
+  mnriLogo14,
+  mnriLogo15,
+  mnriLogo16,
+  mnriLogo17,
+  mnriLogo18,
+  mnriLogo19,
+  mnriLogo20,
+  mnriLogo21,
+  visceralLogo,
+  visceralLogo2,
+  cstLogo,
+  cstLogo2,
+];
+
+const Modal = ({ show, onClose, imgSrc }) => {
+  if (!show) return null;
+
+  return (
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <img src={imgSrc} alt="Enlarged certificate" />
+        <button className={styles.closeButton} onClick={onClose}>
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const HealthAndWellnessPage = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (imgSrc) => {
+    setSelectedImage(imgSrc);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedImage(null);
+  };
+
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 5, // Number of logos visible at a time
+    slidesToScroll: 1, // Scroll one logo at a time
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className={styles.healthWellnessPage}>
       {/* WHO Section */}
@@ -164,38 +255,20 @@ const HealthAndWellnessPage = () => {
       <section className={styles.section}>
         <h2>Banner of Certificates</h2>
         <div className={styles.certificatesBanner}>
-          {[
-            mnriLogo,
-            mnriLogo2,
-            mnriLogo3,
-            mnriLogo4,
-            mnriLogo5,
-            mnriLogo6,
-            mnriLogo7,
-            mnriLogo8,
-            mnriLogo9,
-            mnriLogo10,
-            mnriLogo11,
-            mnriLogo12,
-            mnriLogo13,
-            mnriLogo14,
-            mnriLogo15,
-            mnriLogo16,
-            mnriLogo17,
-            mnriLogo18,
-            mnriLogo19,
-            mnriLogo20,
-            mnriLogo21,
-            rmtLogo,
-            visceralLogo,
-            visceralLogo2,
-            cstLogo,
-            cstLogo2,
-          ].map((logo, index) => (
-            <img src={logo} alt={`Certification ${index}`} key={index} />
+          {certificates.map((logo, index) => (
+            <img
+              src={logo}
+              alt={`Certification ${index}`}
+              key={index}
+              onClick={() => openModal(logo)} // Open modal on click
+              className={styles.clickableImage} // Add a cursor style for clarity
+            />
           ))}
         </div>
       </section>
+
+      {/* Modal for Enlarged Certificates */}
+      <Modal show={isModalOpen} onClose={closeModal} imgSrc={selectedImage} />
 
       {/* Resources Section */}
       <section className={styles.section}>
