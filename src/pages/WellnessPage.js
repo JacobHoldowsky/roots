@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./WellnessPage.module.css"; // Using CSS module
-import cstImage from "../assets/cst.png"; // Replace with actual image paths
-import mnriImage from "../assets/mnri.png";
-import visceralImage from "../assets/visceral.png";
-import raindropImage from "../assets/raindrop.png";
-import herbalImage from "../assets/herbal.png";
+import craniosacralWork from "../assets/craniosacralWork.webp"; // Replace with actual image paths
+import MNRI from "../assets/MNRI.webp";
+import visceralManipulation from "../assets/visceralManipulation.webp";
+import raindropTechnique from "../assets/raindropTechnique.webp";
+import customHerbalFormulations from "../assets/customHerbalFormulations.webp";
 import mnriLogo from "../assets/MNRI1.png";
 import mnriLogo2 from "../assets/MNRI2.png";
 import mnriLogo3 from "../assets/MNRI3.png";
@@ -31,6 +31,12 @@ import cstLogo from "../assets/cstCertificate.png";
 import cstLogo2 from "../assets/cstCertificate2.png";
 import visceralLogo from "../assets/visceralCertificate.png";
 import visceralLogo2 from "../assets/visceralCertificate2.png";
+import muscularProblems from "../assets/muscularProblems.webp";
+import poorImmuneSystem from "../assets/poorImmuneSystem.webp";
+import nervousSystemDysregulation from "../assets/nervousSystemDysregulation.webp";
+import womensHealth from "../assets/womensHealth.webp";
+import digestiveIssues from "../assets/digestiveIssues.webp";
+import otherPhysicalConcerns from "../assets/otherPhysicalConcerns.webp";
 
 const HealthAndWellnessPage = () => {
   return (
@@ -38,39 +44,52 @@ const HealthAndWellnessPage = () => {
       {/* WHO Section */}
       <section className={styles.section}>
         <h1>Health & Wellness</h1>
-        <h2>Can You Identify with Any of These?</h2>
-        <div className={styles.issuesList}>
+        <h2>Can you identify with any of these?</h2>
+        <div className={styles.challenges}>
           {[
             {
-              title: "Muscular/Skeletal Problems",
-              description:
-                "For example: Torticollis, pre/post tongue tie release, back pain, flat feet, scoliosis, postural asymmetry.",
+              image: muscularProblems,
+              alt: "Muscular/ skeletal problems",
+              description: "Muscular/ skeletal problems",
+              examples:
+                "For example: Torticolsis, pre/post tongue tie release, back pain, flat feet, scoliosis, postural asymmetry",
             },
             {
-              title: "Poor Immune System",
-              description: "For example: Ear infections, eczema.",
+              image: poorImmuneSystem,
+              alt: "Poor immune system",
+              description: "Poor immune system",
+              examples: "For example: Ear infections, eczema",
             },
             {
-              title: "Nervous System Dysregulation",
-              description:
-                "For example: Stress, decreased attention/focus, sleep issues.",
+              image: nervousSystemDysregulation,
+              alt: "Nervous system dysregulation",
+              description: "Motor planning/coordination",
+              examples:
+                "For example: stress, decreased attention/focus, sleep issues",
             },
             {
-              title: "Women’s Health Concerns/Hormonal Imbalance",
-              description: "For example: PMS, PCOS.",
+              image: womensHealth,
+              alt: "Women’s health concerns/Hormonal imbalance",
+              description: "Women’s health concerns/Hormonal imbalance",
+              examples: "For example: PMS, PCOS",
             },
             {
-              title: "Digestive Issues",
-              description: "For example: Reflux, constipation.",
+              image: digestiveIssues,
+              alt: "Digestive issues",
+              description: "Digestive issues",
+              examples: "For example: reflux, constipation",
             },
             {
-              title: "Any Other Physical Concerns",
-              description: "For example: Bedwetting.",
+              image: otherPhysicalConcerns,
+              alt: "Any other physical concerns",
+              description: "Any other physical concerns",
+              examples: "For example: bedwetting",
             },
-          ].map((issue, index) => (
-            <div className={styles.issueItem} key={index}>
-              <h3>{issue.title}</h3>
-              <p>{issue.description}</p>
+          ].map((challenge, index) => (
+            <div className={styles.challengeItem} key={index}>
+              <img src={challenge.image} alt={challenge.alt} />
+              <p>{challenge.description}</p>
+              <p>{challenge.examples}</p>
             </div>
           ))}
         </div>
@@ -84,36 +103,37 @@ const HealthAndWellnessPage = () => {
         <div className={styles.treatmentMethods}>
           {[
             {
-              image: cstImage,
+              image: craniosacralWork,
               title: "Craniosacral Therapy (CST)",
               description:
-                "Craniosacral therapy is a gentle, hands-on approach that works with the craniosacral system...",
+                "Craniosacral therapy is a gentle, hands-on approach that works with the craniosacral system, which includes the membranes and cerebrospinal fluid that surround the brain and spinal cord. By gently working on the bones of the skull, spine, and pelvis, they can enhance the flow and balance of cerebrospinal fluid, improving the function of the central nervous system. This therapy alleviates pain, reduces tension, and promotes relaxation and overall well-being. It is often used to treat conditions such as  headaches, neck and back pain, stress-related disorders, and developmental issues in children.",
               link: "https://www.upledger.com/",
             },
             {
-              image: mnriImage,
+              image: MNRI,
               title: "MNRI (Reflex Integration)",
               description:
-                "MNRI is a therapeutic approach focusing on the integration and remediation of reflex patterns...",
+                "MNRI is a therapeutic approach focusing on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that are not properly integrated. This can impact aspects of motor, sensory, emotional, and cognitive functions.",
               link: "https://masgutovamethod.com/the-method/the-mnri-method-approach-program",
             },
             {
-              image: visceralImage,
+              image: visceralManipulation,
               title: "Visceral Manipulation",
               description:
-                "Visceral manipulation is a gentle manual therapy technique focused on improving the mobility and function of internal organs...",
+                "Visceral manipulation is a gentle manual therapy technique focused on improving the mobility and function of internal organs (viscera) within the abdomen and pelvis.  This therapy alleviates pain and dysfunction by restoring normal organ movement and enhancing overall structural balance.",
               link: "https://www.barralinstitute.com/therapies/",
             },
             {
-              image: raindropImage,
+              image: raindropTechnique,
               title: "Raindrop Technique",
               description:
-                "The Raindrop Technique is an aromatherapy treatment, where essential oils are dripped onto the spine and feet...",
+                "The Raindrop Technique is an aromatherapy treatment, where essential oils are dripped onto the spine and feet, then massaged in. Devleped by Gary Young of Young Living Essential Oils, it aims to balance energy, support immune function, aid in relaxation and overall well-being.",
               link: "https://www.youngliving.com/us/en/learn/raindrop-technique",
             },
             {
-              image: herbalImage,
+              image: customHerbalFormulations,
               title: "Custom Herbal Formulations and Supplements",
+              tagline: "Great herbalists treat people, not diseases",
               description:
                 "A custom herbal formula is personalized to your specific health needs, considering medical history, symptoms, and individual constitutional tendencies.",
             },
@@ -121,6 +141,7 @@ const HealthAndWellnessPage = () => {
             <div className={styles.methodItem} key={index}>
               <img src={method.image} alt={method.title} />
               <h3>{method.title}</h3>
+              <h4>{method.tagline}</h4>
               <p>
                 {method.description}
                 {method.link && (
@@ -141,7 +162,7 @@ const HealthAndWellnessPage = () => {
 
       {/* Certificates Section */}
       <section className={styles.section}>
-        <h2>Our Credentials and Certifications</h2>
+        <h2>Banner of Certificates</h2>
         <div className={styles.certificatesBanner}>
           {[
             mnriLogo,
@@ -194,16 +215,21 @@ const HealthAndWellnessPage = () => {
       <section className={styles.section}>
         <h2>How to Get Started</h2>
         <p>
-          Contact Roots to schedule your initial appointment. Please include the
-          reason for your visit and specify whether you are interested in
-          booking a bodywork session or herbal consultation.
+          Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to
+          schedule your initial appointment. Please include the reason for your
+          visit and specify whether you are interested in booking a bodywork
+          session or herbal consultation.
+        </p>
+        <p>
+          Looking forward to guiding you on your path towards health and
+          wellness
         </p>
       </section>
 
       {/* Contact Information Section */}
       <section className={styles.contactInfo}>
         <h2>Contact Roots</h2>
-        <p>Please reach out through text/email.</p>
+        <p>Please reach out through text or email.</p>
         <p>
           Email:{" "}
           <a href="mailto:appointmentsbymimi@gmail.com">

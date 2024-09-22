@@ -53,7 +53,7 @@ const Header = () => {
           Health & Wellness
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink
           to="/contact"
           onClick={closeMobileMenu}
@@ -61,7 +61,7 @@ const Header = () => {
         >
           Contact
         </NavLink>
-      </li>
+      </li> */}
     </>
   );
 
