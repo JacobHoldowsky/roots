@@ -5,6 +5,7 @@ import mimiImage from "../assets/logo.png"; // Replace with actual image paths
 import mnriLogo from "../assets/logo.png";
 import rmtLogo from "../assets/logo.png";
 import tomatisLogo from "../assets/logo.png";
+import TestimonialsSlider from "../components/TestimonialsSlider.js";
 
 const AboutPage = () => {
   const [showMoreRootsHealth, setShowMoreRootsHealth] = useState(false);
@@ -26,6 +27,8 @@ const AboutPage = () => {
       [id]: !prev[id],
     }));
   };
+
+  
 
   return (
     <div className={styles.aboutPage}>
@@ -84,6 +87,8 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      <TestimonialsSlider />
 
       {/* About Mimi Section */}
       <section className={`${styles.aboutSection} ${styles.aboutMimi}`}>

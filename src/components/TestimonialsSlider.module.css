@@ -1,0 +1,115 @@
+.testimonials {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+  height: auto;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  /* background-color: #e8f2f1; */
+  border-radius: 10px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: auto;
+}
+
+.testimonial blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  font-style: italic;
+  color: #333;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.testimonial p {
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.testimonial footer {
+  font-size: 0.9em;
+  color: #666;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #008cba;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #008cba;
+}
+
+.btnToggle {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btnToggle:hover {
+  background-color: #005f85;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nextArrow {
+  right: -20px;
+}
+
+.prevArrow {
+  left: -20px;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    padding: 20px;
+  }
+
+  .testimonials {
+    width: 90%;
+  }
+
+  .testimonial blockquote {
+    font-size: 1rem;
+  }
+
+  .btnToggle {
+    font-size: 0.8em;
+    padding: 8px 16px;
+  }
+
+  .arrow {
+    padding: 8px;
+  }
+}
