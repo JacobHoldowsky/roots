@@ -8,11 +8,94 @@ import auditoryProcessing from "../assets/auditoryProcessing.webp";
 import learningDifficulties from "../assets/learningDifficulties.webp";
 import visualProcessing from "../assets/visualProcessing.webp";
 import tomatisLogo from "../assets/logo.png";
-import mnriLogo from "../assets/logo.png";
 import rmtLogo from "../assets/logo.png";
+import mnriLogo from "../assets/MNRI1.png";
+import mnriLogo2 from "../assets/MNRI2.png";
+import mnriLogo3 from "../assets/MNRI3.png";
+import mnriLogo4 from "../assets/MNRI4.png";
+import mnriLogo5 from "../assets/MNRI5.png";
+import mnriLogo6 from "../assets/MNRI6.png";
+import mnriLogo7 from "../assets/MNRI7.png";
+import mnriLogo8 from "../assets/MNRI8.png";
+import mnriLogo9 from "../assets/MNRI9.png";
+import mnriLogo10 from "../assets/MNRI10.png";
+import mnriLogo11 from "../assets/MNRI11.png";
+import mnriLogo12 from "../assets/MNRI12.png";
+import mnriLogo13 from "../assets/MNRI13.png";
+import mnriLogo14 from "../assets/MNRI14.png";
+import mnriLogo15 from "../assets/MNRI15.png";
+import mnriLogo16 from "../assets/MNRI16.png";
+import mnriLogo17 from "../assets/MNRI17.png";
+import mnriLogo18 from "../assets/MNRI18.png";
+import mnriLogo19 from "../assets/MNRI19.png";
+import mnriLogo20 from "../assets/MNRI20.png";
+import mnriLogo21 from "../assets/MNRI21.png";
+import cstLogo from "../assets/cstCertificate.png";
+import cstLogo2 from "../assets/cstCertificate2.png";
+import visceralLogo from "../assets/visceralCertificate.png";
+import visceralLogo2 from "../assets/visceralCertificate2.png";
 
 const GrowthAndDevelopmentPage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (imgSrc) => {
+    setSelectedImage(imgSrc);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedImage(null);
+  };
+
+  const certificates = [
+    mnriLogo,
+    mnriLogo2,
+    mnriLogo3,
+    mnriLogo4,
+    mnriLogo5,
+    mnriLogo6,
+    mnriLogo7,
+    mnriLogo8,
+    mnriLogo9,
+    mnriLogo10,
+    mnriLogo11,
+    mnriLogo12,
+    mnriLogo13,
+    mnriLogo14,
+    mnriLogo15,
+    mnriLogo16,
+    mnriLogo17,
+    mnriLogo18,
+    mnriLogo19,
+    mnriLogo20,
+    mnriLogo21,
+    visceralLogo,
+    visceralLogo2,
+    cstLogo,
+    cstLogo2,
+  ];
+
+  const Modal = ({ show, onClose, imgSrc }) => {
+    if (!show) return null;
+
+    return (
+      <div className={styles.modalOverlay} onClick={onClose}>
+        <div
+          className={styles.modalContent}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <img src={imgSrc} alt="Enlarged certificate" />
+          <button className={styles.closeButton} onClick={onClose}>
+            Close
+          </button>
+        </div>
+      </div>
+    );
+  };
 
   const toggleExpanded = (index) => {
     setExpandedIndex(index === expandedIndex ? null : index);
@@ -182,17 +265,26 @@ const GrowthAndDevelopmentPage = () => {
       </section>
 
       {/* Certificates Section */}
-      <section className={styles.certificatesSection}>
+      <section className={styles.section}>
         <h2>Helping Parents Help Their Children</h2>
         <div className={styles.certificatesBanner}>
-          {[mnriLogo, rmtLogo, tomatisLogo].map((logo, index) => (
-            <img src={logo} alt="Certification Logo" key={index} />
+          {certificates.map((logo, index) => (
+            <img
+              src={logo}
+              alt={`Certification ${index}`}
+              key={index}
+              onClick={() => openModal(logo)} // Open modal on click
+              className={styles.clickableImage} // Add a cursor style for clarity
+            />
           ))}
         </div>
       </section>
 
+      {/* Modal for Enlarged Certificates */}
+      <Modal show={isModalOpen} onClose={closeModal} imgSrc={selectedImage} />
+
       {/* Resources Section */}
-      <section className={styles.resourcesSection}>
+      <section className={styles.section}>
         <h2>Roots Approved Recommended Resources</h2>
         {[
           {

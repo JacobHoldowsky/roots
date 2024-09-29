@@ -154,9 +154,6 @@ const AboutPage = () => {
               </div>
             )}
           </div>
-          <div className={styles.aboutMimiImage}>
-            <img src={mimiImage} alt="Mimi" />
-          </div>
         </div>
       </section>
 
