@@ -28,8 +28,6 @@ const AboutPage = () => {
     }));
   };
 
-  
-
   return (
     <div className={styles.aboutPage}>
       {/* About Roots Section */}
@@ -87,8 +85,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
-      <TestimonialsSlider />
 
       {/* About Mimi Section */}
       <section className={`${styles.aboutSection} ${styles.aboutMimi}`}>
@@ -164,147 +160,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className={styles.testimonials}>
-        <h2>Hear it from Clients & Professionals</h2>
-
-        {/* Testimonial 1 */}
-        <div className={styles.testimonial}>
-          <blockquote>
-            <p>
-              "I am thrilled to recommend Mimi as an exceptional occupational
-              therapist who has made a profound impact on my child's life. Her
-              exceptional caring nature, vast knowledge, and gentle approach
-              have created a safe and nurturing environment for my child to grow
-              and thrive
-              {!showMoreTestimonials["roizy"] ? "..." : "."}
-            </p>
-            {showMoreTestimonials["roizy"] && (
-              <>
-                <p>
-                  The gym, specifically designed for kids, is a testament to her
-                  dedication and expertise. Mimi is not only an expert in
-                  occupational therapy but also in MNRI and craniosacral
-                  therapy, making her a true gem in her field. Her education and
-                  training are evident in every session, and her love and
-                  devotion to her work shine through in every interaction.
-                </p>
-                <p>
-                  Through Mimi’s guidance and support, my daughter has learned
-                  how to be happy in her own skin, a gift that will benefit her
-                  for the rest of her life.
-                </p>
-              </>
-            )}
-            <button
-              className={styles.btnToggle}
-              onClick={() => toggleSeeMoreTestimonial("roizy")}
-            >
-              {showMoreTestimonials["roizy"] ? "See less" : "See more"}
-            </button>
-            <footer>- Roizy S., Occupational Therapy Client</footer>
-          </blockquote>
-        </div>
-
-        {/* Testimonial 2 */}
-        <div className={styles.testimonial}>
-          <blockquote>
-            <p>
-              "Mimi is kind and extremely knowledgeable. She uses various
-              methods and customizes her work for each client according to what
-              they need. She’s extremely connected to the kids and makes the
-              sessions really fun. Mimi is also honest when she feels that the
-              kid is ready to move on."
-            </p>
-            <footer>- C.S., Occupational Therapy Client</footer>
-          </blockquote>
-        </div>
-
-        {/* Testimonial 3 */}
-        <div className={styles.testimonial}>
-          <blockquote>
-            <p>
-              "Mimi is currently treating my second child. We saw major
-              progress. Mimi is extremely professional and knowledgeable. Both
-              my kids have very different needs, and Mimi was able to zero in on
-              exactly what each child needs
-              {!showMoreTestimonials["faiga"] ? "..." : "."}
-            </p>
-
-            {showMoreTestimonials["faiga"] && (
-              <>
-                <p>
-                  She keeps them very motivated, and they are excited to go.
-                  After just a few sessions, my son's teacher commented that he
-                  does not stand out among his peers in any way. He follows
-                  along just like everyone else.
-                </p>
-                <p>
-                  My daughter's teacher said that I brought her a different kid.
-                  Thank you, Mimi, for making such a huge difference in our
-                  lives."
-                </p>
-              </>
-            )}
-            <button
-              className={styles.btnToggle}
-              onClick={() => toggleSeeMoreTestimonial("faiga")}
-            >
-              {showMoreTestimonials["faiga"] ? "See less" : "See more"}
-            </button>
-            <footer>- Faiga W., Client</footer>
-          </blockquote>
-        </div>
-
-        {/* Testimonial 4 */}
-        <div className={styles.testimonial}>
-          <blockquote>
-            <p>
-              "I have observed Mimi in action over the years and am always
-              amazed at how she manages to get children to cooperate with their
-              treatment plans, using different motivators for each child. Her
-              assessments are thorough and examine every area of the child's
-              life
-              {!showMoreTestimonials["libby"] ? "..." : "."}
-            </p>
-
-            {showMoreTestimonials["libby"] && (
-              <>
-                <p>
-                  Then she crafts custom goals and plans to help each child
-                  achieve their fullest potential. I am also impressed at her
-                  refusal to stop training—she is never content to stay with her
-                  current, vast knowledge but rather aims to upgrade and
-                  increase her professional skills by taking frequent training
-                  in all aspects of occupational therapy. Any client of Mimi is
-                  sure to go far!"
-                </p>
-              </>
-            )}
-            <button
-              className={styles.btnToggle}
-              onClick={() => toggleSeeMoreTestimonial("libby")}
-            >
-              {showMoreTestimonials["libby"] ? "See less" : "See more"}
-            </button>
-            <footer>- Libby S., MS-SLP</footer>
-          </blockquote>
-        </div>
-
-        {/* Testimonial 5 */}
-        <div className={styles.testimonial}>
-          <blockquote>
-            <p>
-              "Mimi’s commitment to her clients and to helping others is
-              unparalleled. She is always looking to learn new methods, expand
-              her horizons, while refining the skills she has already acquired.
-              As a colleague, I was extremely impressed with her dedication to
-              the community and to the profession."
-            </p>
-            <footer>- Malky G., MS OT, Former OT Supervisor</footer>
-          </blockquote>
-        </div>
-      </section>
+      <TestimonialsSlider />
 
       {/* Training and Certifications Slider */}
       <section className={styles.trainingBanner}>
