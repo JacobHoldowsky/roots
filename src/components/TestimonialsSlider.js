@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "./TestimonialsSlider.module.css"; // Updated CSS file
+import styles from "./TestimonialsSlider.module.css";
 
 const testimonials = [
   {
@@ -54,13 +54,18 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const TestimonialsSlider = () => {
-  const [expandedTestimonials, setExpandedTestimonials] = React.useState({});
+  const [expandedTestimonials, setExpandedTestimonials] = useState({});
 
   const toggleTestimonialExpansion = (key) => {
-    setExpandedTestimonials((prev) => ({
-      ...prev,
-      [key]: !prev[key],
+    setExpandedTestimonials((prevState) => ({
+      ...prevState,
+      [key]: !prevState[key],
     }));
+  };
+
+  const handleBeforeChange = () => {
+    // Reset the expanded testimonials when the slide is about to change
+    setExpandedTestimonials({});
   };
 
   const sliderSettings = {
@@ -70,44 +75,42 @@ const TestimonialsSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 50000,
+    autoplaySpeed: 5000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    beforeChange: handleBeforeChange, // This will trigger before the slide changes
   };
 
   return (
     <section className={styles.testimonials}>
       <h2>What Clients & Professionals Are Saying</h2>
       <Slider {...sliderSettings}>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className={styles.testimonial}>
-            <blockquote>
-              <p>
-                {testimonial.quote}
-                {testimonial.showMoreKey &&
-                  !expandedTestimonials[testimonial.showMoreKey] &&
-                  ".."}
-              </p>
-              {testimonial.showMoreKey &&
-                expandedTestimonials[testimonial.showMoreKey] && (
-                  <p>{testimonial.extendedQuote}</p>
+        {testimonials.map(
+          ({ quote, extendedQuote, author, showMoreKey }, index) => (
+            <div key={index} className={styles.testimonial}>
+              <blockquote>
+                <p>
+                  {quote}
+                  {showMoreKey && !expandedTestimonials[showMoreKey] && ".."}
+                </p>
+                {showMoreKey && expandedTestimonials[showMoreKey] && (
+                  <p>{extendedQuote}</p>
                 )}
-              {testimonial.showMoreKey && (
-                <button
-                  className={styles.btnToggle}
-                  onClick={() =>
-                    toggleTestimonialExpansion(testimonial.showMoreKey)
-                  }
-                >
-                  {expandedTestimonials[testimonial.showMoreKey]
-                    ? "Show Less"
-                    : "Read More"}
-                </button>
-              )}
-              <footer>- {testimonial.author}</footer>
-            </blockquote>
-          </div>
-        ))}
+                {showMoreKey && (
+                  <button
+                    className={styles.btnToggle}
+                    onClick={() => toggleTestimonialExpansion(showMoreKey)}
+                  >
+                    {expandedTestimonials[showMoreKey]
+                      ? "Show Less"
+                      : "Read More"}
+                  </button>
+                )}
+                <footer>- {author}</footer>
+              </blockquote>
+            </div>
+          )
+        )}
       </Slider>
     </section>
   );

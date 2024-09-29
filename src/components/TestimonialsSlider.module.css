@@ -1,78 +1,101 @@
-.testimonials {
+/* Root Variables */
+:root {
+  --primary-color: #5A4E8C;
+  --primary-color-hover: #E07A5F;
+  --text-color: #2D2D2D;
+  --secondary-text-color: #666;
+  --arrow-bg: rgba(0, 0, 0, 0.5);
+  --arrow-bg-hover: rgba(0, 0, 0, 0.8);
+  --border-radius: 10px;
+  --font-size-base: 16px;
+}
+
+/* Testimonials Container */
+.testimonials { 
   width: 80%;
   margin: 0 auto;
   text-align: center;
   padding: 40px 0;
-  height: auto;
 }
 
+/* Individual Testimonial */
 .testimonial {
   display: flex;
   justify-content: center;
-  /* background-color: #e8f2f1; */
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   transition: max-height 0.4s ease, padding 0.4s ease;
   margin-bottom: 20px;
   overflow: hidden;
-  height: auto;
+  
 }
 
+.testimonials h2 {
+  color: var(--primary-color);
+}
+
+/* Blockquote Styling */
 .testimonial blockquote {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-style: italic;
-  color: #333;
+  color: var(--text-color);
   padding: 10px;
   line-height: 1.5;
 }
 
+/* Paragraph within Blockquote */
 .testimonial p {
   margin-bottom: 20px;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
+/* Footer within Blockquote */
 .testimonial footer {
-  font-size: 0.9em;
-  color: #666;
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
   font-weight: bold;
   margin-top: 20px;
 }
 
-.slick-prev:before, .slick-next:before {
-  color: #008cba;
+/* Slick Slider Navigation Arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: var(--primary-color);
 }
 
+/* Slick Slider Dots */
 .slick-dots li button:before {
   font-size: 10px;
-  color: #008cba;
+  color: var(--primary-color);
 }
 
+/* Toggle Button */
 .btnToggle {
-  background-color: #008cba;
-  color: white;
+  background-color: var(--secondary-color);
+  color: #fff;
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   transition: background-color 0.3s ease-in-out;
 }
 
 .btnToggle:hover {
-  background-color: #005f85;
+  background-color: #cc6b55;
 }
 
+/* Navigation Arrows */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: var(--arrow-bg);
+  color: #fff;
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -80,22 +103,19 @@
 }
 
 .nextArrow {
-  right: -20px;
+  right: -15px;
 }
 
 .prevArrow {
-  left: -20px;
+  left: -15px;
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--arrow-bg-hover);
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .testimonial {
-    padding: 20px;
-  }
-
   .testimonials {
     width: 90%;
   }
@@ -105,7 +125,7 @@
   }
 
   .btnToggle {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     padding: 8px 16px;
   }
 
