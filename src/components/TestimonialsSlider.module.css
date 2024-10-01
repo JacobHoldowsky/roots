@@ -1,7 +1,7 @@
 /* Root Variables */
 :root {
-  --primary-color: #5A4E8C;
-  --primary-color-hover: #E07A5F;
+  --primary-color: #0f728a;
+  --primary-color-hover: #6ac8c3;
   --text-color: #2D2D2D;
   --secondary-text-color: #666;
   --arrow-bg: rgba(0, 0, 0, 0.5);
@@ -86,7 +86,7 @@
 }
 
 .btnToggle:hover {
-  background-color: #cc6b55;
+  background-color: #0f728a;
 }
 
 /* Navigation Arrows */
