@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png"; // Replace with your actual logo path
+import logo2 from "../assets/logo2.png"; // Replace with your actual logo path
 import styles from "./Header.module.css"; // Import the CSS module
 
 const Header = () => {
@@ -71,7 +72,7 @@ const Header = () => {
         {/* Logo */}
         <div className={styles.headerLogo}>
           <Link to="/" onClick={closeMobileMenu}>
-            <img src={logo} alt="Roots Therapy Logo" />
+            <img src={logo2} alt="Roots Therapy Logo" />
           </Link>
         </div>
 

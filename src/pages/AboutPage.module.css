@@ -3,8 +3,8 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #5A4E8C; /* Deep professional purple */
-  --secondary-color: #E07A5F; /* Muted elegant orange */
+  --primary-color: #0f728a; 
+  --secondary-color: #6ac8c3; 
   --text-color: #2D2D2D;
   --background-color: #F9F9F9;
   --light-gray: #E5E5E5;
@@ -28,7 +28,7 @@
 }
 
 .aboutSection h1, .aboutSection h2 {
-  color: var(--primary-color);
+  color: #0f728a;
   font-family: var(--heading-font-family);
   margin-bottom: 30px;
   text-align: center;
@@ -70,7 +70,7 @@
 }
 
 .btnToggle {
-  background-color: var(--secondary-color);
+  background-color: #6ac8c3;
   color: #ffffff;
   border: none;
   padding: 10px 25px;
@@ -82,7 +82,7 @@
 }
 
 .btnToggle:hover {
-  background-color: #cc6b55;
+  background-color: #0f728a;
 }
 
 /* About Mimi Section */
@@ -127,7 +127,7 @@
 }
 
 .testimonials h2 {
-  color: var(--primary-color);
+  color: #0f728a;
   margin-bottom: 50px;
 }
 
@@ -172,7 +172,7 @@
 }
 
 .trainingBanner h2 {
-  color: var(--primary-color);
+  color: #0f728a;
   margin-bottom: 50px;
 }
 
@@ -198,7 +198,7 @@
 
 /* Contact Information Section */
 .contactInfo {
-  background-color: var(--primary-color);
+  background-color: #0f728a;
   color: #ffffff;
   padding: 80px 20px;
   text-align: center;

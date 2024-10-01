@@ -19,32 +19,6 @@ const Footer = () => {
             Text: <a href="tel:+18454459230">(845) 445-9230</a>
           </p>
         </div>
-        <div className="footer-social">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-        </div>
       </div>
     </footer>
   );
