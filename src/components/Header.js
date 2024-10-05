@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png"; // Replace with your actual logo path
-import logo2 from "../assets/logo2.png"; // Replace with your actual logo path
+import logo2 from "../assets/logo2.png"; // Replace with your actual logo2 path
+import logo4 from "../assets/logo4.png"; // Replace with your actual logo2 path
 import styles from "./Header.module.css"; // Import the CSS module
 
 const Header = () => {
@@ -69,10 +69,13 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerContainer}>
-        {/* Logo */}
+        {/* logo2 */}
         <div className={styles.headerLogo}>
           <Link to="/" onClick={closeMobileMenu}>
-            <img src={logo2} alt="Roots Therapy Logo" />
+            <img src={logo2} alt="Roots Therapy logo2" />
+          </Link>
+          <Link to="/" onClick={closeMobileMenu}>
+            <img src={logo4} alt="Roots Therapy logo2" />
           </Link>
         </div>
 

@@ -62,7 +62,7 @@ img {
   align-items: center;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url('../assets/background3.webp');
+  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url('../assets/background6.webp');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -186,6 +186,11 @@ img {
   font-size: clamp(1.5rem, 4vw, 1.75rem);
   color: var(--primary-color);
   font-family: var(--heading-font-family);
+  max-width: 200px;
+}
+.homePageService img {
+  width: 150px;
+  height: 100%
 }
 
 /* Contact Section */

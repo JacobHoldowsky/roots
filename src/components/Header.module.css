@@ -1,4 +1,5 @@
 /* Header Styles */
+
 .header {
   background-color: var(--background-color);
   position: fixed;
@@ -20,6 +21,11 @@
 }
 
 /* Logo Styling */
+.headerLogo  {
+ display: flex;
+ gap: 15px;
+}
+
 .headerLogo img {
   max-height: 50px;
   transition: transform 0.3s ease;
@@ -52,13 +58,13 @@
 }
 
 .headerNav ul li a:hover {
-  color: var(--primary-color); /* Color change on hover */
-  border-bottom: 2px solid var(--primary-color); /* Underline on hover */
+  color: #0f728a; /* Color change on hover */
+  border-bottom: 2px solid #0f728a; /* Underline on hover */
 }
 
 .activeLink {
-  color: var(--primary-color);
-  border-bottom: 2px solid var(--primary-color); /* Active link underline */
+  color: #0f728a;
+  border-bottom: 2px solid #0f728a; /* Active link underline */
 }
 
 /* Hamburger Menu for Mobile */
