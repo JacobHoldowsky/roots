@@ -120,6 +120,8 @@
   border-radius: 15px;
   text-align: left;
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+    overflow-wrap: break-word; /* Allows long words to break */
+
 }
 
 .serviceItem:hover {
@@ -196,16 +198,21 @@
   padding: 80px 40px;
   text-align: center;
   border-radius: 15px;
+  
+  
 }
 
 .contactInfo h2 {
   margin-bottom: 30px;
+  
 }
 
 .contactInfo p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 15px;
-}
+  overflow-wrap: break-word; /* Allows long words to break */
+
+  }
 
 .contactInfo a {
   color: #ffffff;
