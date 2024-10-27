@@ -59,33 +59,29 @@
 /* Challenges Section */
 .challenges {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 40px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .challengeItem {
-  background-color: var(--light-gray);
-  padding: 30px 20px;
+  background: var(--light-gray);
+  padding: 20px;
   flex: 1 1 250px;
-  max-width: 350px;
-  border-radius: 15px;
-  text-align: center;
+  max-width: 300px;
+  border-radius: 8px;
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
-  cursor: pointer;
 }
 
 .challengeItem:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
-.challengeItem img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.challengeIcon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
 }
 
 .challengeItem p {
@@ -126,6 +122,13 @@
 .methodItem h3 {
   color: var(--primary-color);
   margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.challengeItem h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .methodItem p {
@@ -246,6 +249,28 @@
 
 .contactInfo a:hover {
   color: #e0d6f5; /* Lighter shade of primary color */
+}
+
+.link {
+  color: #007bff; /* Link color */
+  font-weight: bold;
+  font-size: 1.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* Space between text and icon */
+  text-decoration: none; /* Remove underline for the entire link */
+}
+
+.linkText {
+  text-decoration: underline; /* Only underline the text */
+}
+
+.linkIcon {
+  text-decoration: none; /* Ensure icon has no underline */
+}
+
+.link:hover .linkText {
+  color: #0056b3; /* Darker color on hover for the text */
 }
 
 @media (max-width: 768px) {

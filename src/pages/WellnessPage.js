@@ -40,33 +40,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const certificates = [
-  mnriLogo,
-  mnriLogo2,
-  mnriLogo3,
-  mnriLogo4,
-  mnriLogo5,
-  mnriLogo6,
-  mnriLogo7,
-  mnriLogo8,
-  mnriLogo9,
-  mnriLogo10,
-  mnriLogo11,
-  mnriLogo12,
-  mnriLogo13,
-  mnriLogo14,
-  mnriLogo15,
-  mnriLogo16,
-  mnriLogo17,
-  mnriLogo18,
-  mnriLogo19,
-  mnriLogo20,
-  mnriLogo21,
-  visceralLogo,
-  visceralLogo2,
-  cstLogo,
-  cstLogo2,
-];
+const certificates = [visceralLogo, visceralLogo2, cstLogo, cstLogo2];
 
 const Modal = ({ show, onClose, imgSrc }) => {
   if (!show) return null;
@@ -106,47 +80,77 @@ const HealthAndWellnessPage = () => {
         <div className={styles.challenges}>
           {[
             {
-              image: muscularProblems,
+              image: (
+                <i
+                  className="fa-solid fa-x-ray text-red-500 fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               alt: "Muscular/ skeletal problems",
               description: "Muscular/ skeletal problems",
               examples:
                 "For example: Torticolsis, pre/post tongue tie release, back pain, flat feet, scoliosis, postural asymmetry",
             },
             {
-              image: poorImmuneSystem,
+              image: (
+                <i
+                  class="fa-solid fa-viruses fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               alt: "Poor immune system",
               description: "Poor immune system",
               examples: "For example: Ear infections, eczema",
             },
             {
-              image: nervousSystemDysregulation,
+              image: (
+                <i
+                  class="fa-solid fa-arrows-to-circle fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               alt: "Nervous system dysregulation",
               description: "Motor planning/coordination",
               examples:
                 "For example: stress, decreased attention/focus, sleep issues",
             },
             {
-              image: womensHealth,
+              image: (
+                <i
+                  class="fa-solid fa-person-dress fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               alt: "Women’s health concerns/Hormonal imbalance",
               description: "Women’s health concerns/Hormonal imbalance",
               examples: "For example: PMS, PCOS",
             },
             {
-              image: digestiveIssues,
+              image: (
+                <i
+                  class="fa-solid fa-utensils fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               alt: "Digestive issues",
               description: "Digestive issues",
               examples: "For example: reflux, constipation",
             },
             {
-              image: otherPhysicalConcerns,
+              image: (
+                <i
+                  class="fa-solid fa-user-doctor fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               alt: "Any other physical concerns",
               description: "Any other physical concerns",
               examples: "For example: bedwetting",
             },
           ].map((challenge, index) => (
             <div className={styles.challengeItem} key={index}>
-              <img src={challenge.image} alt={challenge.alt} />
-              <p>{challenge.description}</p>
+              {challenge.image}
+              <h3>{challenge.description}</h3>
               <p>{challenge.examples}</p>
             </div>
           ))}
@@ -161,35 +165,60 @@ const HealthAndWellnessPage = () => {
         <div className={styles.treatmentMethods}>
           {[
             {
-              image: craniosacralWork,
+              image: (
+                <i
+                  class="fa-solid fa-peace fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               title: "Craniosacral Therapy (CST)",
               description:
                 "Craniosacral therapy is a gentle, hands-on approach that works with the craniosacral system, which includes the membranes and cerebrospinal fluid that surround the brain and spinal cord. By gently working on the bones of the skull, spine, and pelvis, they can enhance the flow and balance of cerebrospinal fluid, improving the function of the central nervous system. This therapy alleviates pain, reduces tension, and promotes relaxation and overall well-being. It is often used to treat conditions such as  headaches, neck and back pain, stress-related disorders, and developmental issues in children.",
               link: "https://www.upledger.com/",
             },
             {
-              image: MNRI,
+              image: (
+                <i
+                  class="fa-solid fa-brain fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               title: "MNRI (Reflex Integration)",
               description:
                 "MNRI is a therapeutic approach focusing on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that are not properly integrated. This can impact aspects of motor, sensory, emotional, and cognitive functions.",
               link: "https://masgutovamethod.com/the-method/the-mnri-method-approach-program",
             },
             {
-              image: visceralManipulation,
+              image: (
+                <i
+                  class="fa-solid fa-scale-balanced fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               title: "Visceral Manipulation",
               description:
                 "Visceral manipulation is a gentle manual therapy technique focused on improving the mobility and function of internal organs (viscera) within the abdomen and pelvis.  This therapy alleviates pain and dysfunction by restoring normal organ movement and enhancing overall structural balance.",
               link: "https://www.barralinstitute.com/therapies/",
             },
             {
-              image: raindropTechnique,
+              image: (
+                <i
+                  class="fa-solid fa-droplet fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               title: "Raindrop Technique",
               description:
                 "The Raindrop Technique is an aromatherapy treatment, where essential oils are dripped onto the spine and feet, then massaged in. Devleped by Gary Young of Young Living Essential Oils, it aims to balance energy, support immune function, aid in relaxation and overall well-being.",
               link: "https://www.youngliving.com/us/en/learn/raindrop-technique",
             },
             {
-              image: customHerbalFormulations,
+              image: (
+                <i
+                  class="fa-solid fa-leaf fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
+              ),
               title: "Custom Herbal Formulations and Supplements",
               tagline: "Great herbalists treat people, not diseases",
               description:
@@ -197,7 +226,7 @@ const HealthAndWellnessPage = () => {
             },
           ].map((method, index) => (
             <div className={styles.methodItem} key={index}>
-              <img src={method.image} alt={method.title} />
+              {method.image}
               <h3>{method.title}</h3>
               <h4>{method.tagline}</h4>
               <p>
@@ -246,8 +275,12 @@ const HealthAndWellnessPage = () => {
             href="https://www.amazon.com/hz/wishlist/ls/8CKR8NE0FVXF?ref_=wl_share"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.link}
           >
-            Roots Recommended Resources - Health and Wellness Books
+            <span className={styles.linkText}>
+              Roots Recommended Resources - Health and Wellness Books
+            </span>
+            <span className={styles.linkIcon}>🔗</span>
           </a>
         </p>
       </section>

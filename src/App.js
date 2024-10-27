@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import styles from "./App.module.css"; // Import the CSS module
 import ScrollToTop from "./components/ScrollToTop"; // Import the ScrollToTop component
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const HomePage = lazy(() => import("./pages/HomePage"));

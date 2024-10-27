@@ -152,12 +152,6 @@ img {
   text-align: center;
 }
 
-.homePageServices h2 {
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  margin-bottom: 60px;
-  font-family: var(--heading-font-family);
-  color: var(--primary-color);
-}
 
 .serviceGrid {
   display: flex;
@@ -167,14 +161,19 @@ img {
 }
 
 .homePageService {
-  padding: 30px;
-  background-color: #ffffff;
+  width: 200px; /* Smaller range for responsive diameter */
+  height: 200px; /* Smaller range for responsive diameter */
+  aspect-ratio: 1 / 1; /* Keeps it perfectly circular */
+  background-color: #dbfffb;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 50%; /* Makes it circular */
   box-shadow: var(--shadow-primary);
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
-  max-width: 300px;
-  width: 100%;
+  display: flex; /* Center content */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure content stays within the circle */
+  padding: 0; /* Remove padding to avoid excess space */
 }
 
 .homePageService:hover {
@@ -182,16 +181,86 @@ img {
   box-shadow: var(--shadow-hover);
 }
 
-.homePageService h3 {
-  font-size: clamp(1.5rem, 4vw, 1.75rem);
-  color: var(--primary-color);
-  font-family: var(--heading-font-family);
-  max-width: 200px;
+/* Contact Information Section */
+.contactInfo {
+  background-color: #0f728a;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  overflow-wrap: break-word; /* Allows long words to break */
+
 }
+
+.contactInfo h2 {
+  margin-bottom: 30px;
+}
+
+.contactInfo p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.contactInfo a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.contactInfo a:hover {
+  color: #e0d6f5;
+}
+
+/* Ensure the entire image fits within the circle */
 .homePageService img {
-  width: 100px;
-  height: 100%
+  width: 100%; /* Fill the width of the circle */
+  height: 100px; /* Fill the height of the circle */
+  object-fit: contain; /* Maintain the image’s entire view without cropping */
 }
+
+/* Media query for very small screens */
+@media (max-width: 800px) {
+  .homePageService {
+    width: 175px; /* Smaller range for responsive diameter */
+    height: 175px;
+  }
+  .homePageService img {
+    width: 100%; /* Fill the width of the circle */
+    height: 95px; /* Fill the height of the circle */
+  }
+}
+
+@media (max-width: 450px) {
+  .homePageService {
+    width: 160px; /* Smaller range for responsive diameter */
+    height: 160px;
+  }
+  .homePageService img {
+    width: 100%; /* Fill the width of the circle */
+    height: 90px; /* Fill the height of the circle */
+  }
+}
+
+@media (max-width: 400px) {
+  .homePageService {
+    width: 150px; /* Smaller range for responsive diameter */
+    height: 150px;
+  }
+  .homePageService img {
+    width: 100%; /* Fill the width of the circle */
+    height: 85px; /* Fill the height of the circle */
+  }
+}
+
+@media (max-width: 350px) {
+  .homePageService {
+    width: 135px; /* Smaller range for responsive diameter */
+    height: 135px;
+  }
+  .homePageService img {
+    width: 100%; /* Fill the width of the circle */
+    height: 80px; /* Fill the height of the circle */
+  }
+}
+
 
 /* Contact Section */
 .homePageContact {
@@ -240,29 +309,18 @@ img {
 
 /* Larger devices, wide screens */
 @media (max-width: 1024px) {
-  .heroContent {
-    padding: 0 40px;
-  }
+ 
 
   .heroLinks {
     gap: 20px;
   }
 
-  .homePageService {
-    max-width: 250px;
-  }
+
 }
 
 /* Tablets */
 @media (max-width: 768px) {
-  .heroLinks {
-    flex-direction: column;
-    gap: 20px;
-  }
 
-  .heroLink {
-    width: 100%;
-  }
 
   .heroContent h1 {
     font-size: 2.5rem;
@@ -272,14 +330,9 @@ img {
     font-size: 1.1rem;
   }
 
-  .serviceGrid {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .homePageService {
-    max-width: 90%;
-  }
+
+
 }
 
 /* Mobile devices */
@@ -301,13 +354,7 @@ img {
     font-size: 1.4rem;
   }
 
-  .heroLinks {
-    display: flex;
-    align-items: center;
-  }
 
-  .heroLink {
-    padding: 15px;
-    font-size: 0.9rem;
-  }
+
+
 }

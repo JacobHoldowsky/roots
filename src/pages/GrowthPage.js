@@ -73,10 +73,7 @@ const GrowthAndDevelopmentPage = () => {
     mnriLogo19,
     mnriLogo20,
     mnriLogo21,
-    visceralLogo,
-    visceralLogo2,
-    cstLogo,
-    cstLogo2,
+    
   ];
 
   const Modal = ({ show, onClose, imgSrc }) => {
@@ -144,39 +141,69 @@ const GrowthAndDevelopmentPage = () => {
         <div className={styles.challenges}>
           {[
             {
-              image: sensoryRegulation,
+              image: (
+                <i
+                  class="fa-solid fa-tower-broadcast fa-2xl"
+                  style={{ color: "#E07A5F" }}
+                ></i>
+              ),
               alt: "Sensory Regulation",
               description:
                 "Sensory regulation, sensory defensive/sensory seeking",
             },
             {
-              image: developmentalDelays,
+              image: (
+                <i
+                  class="fa-solid fa-brain fa-2xl"
+                  style={{ color: "#E07A5F" }}
+                ></i>
+              ),
               alt: "Developmental Delays",
               description: "Developmental delays",
             },
             {
-              image: motorPlanning,
+              image: (
+                <i
+                  class="fa-solid fa-arrows-to-circle fa-2xl"
+                  style={{ color: "#E07A5F" }}
+                ></i>
+              ),
               alt: "Motor planning/coordination",
               description: "Motor planning/coordination",
             },
             {
-              image: learningDifficulties,
+              image: (
+                <i
+                  class="fa-solid fa-school fa-2xl"
+                  style={{ color: "#E07A5F" }}
+                ></i>
+              ),
               alt: "Learning Difficulties",
               description: "Learning difficulties (body-based)",
             },
             {
-              image: auditoryProcessing,
+              image: (
+                <i
+                  class="fa-solid fa-ear-listen fa-2xl"
+                  style={{ color: "#E07A5F" }}
+                ></i>
+              ),
               alt: "Auditory processing",
               description: "Auditory processing",
             },
             {
-              image: visualProcessing,
+              image: (
+                <i
+                  class="fa-solid fa-eye fa-2xl"
+                  style={{ color: "#E07A5F" }}
+                ></i>
+              ),
               alt: "Visual processing",
               description: "Visual processing",
             },
           ].map((challenge, index) => (
             <div className={styles.challengeItem} key={index}>
-              <img src={challenge.image} alt={challenge.alt} />
+              <div>{challenge.image}</div>
               <p>{challenge.description}</p>
             </div>
           ))}
@@ -266,7 +293,7 @@ const GrowthAndDevelopmentPage = () => {
 
       {/* Certificates Section */}
       <section className={styles.section}>
-        <h2>Helping Parents Help Their Children</h2>
+        <h2>Banner of Certificates</h2>
         <div className={styles.certificatesBanner}>
           {certificates.map((logo, index) => (
             <img
@@ -297,8 +324,14 @@ const GrowthAndDevelopmentPage = () => {
           },
         ].map((resource, index) => (
           <p key={index}>
-            <a href={resource.link} target="_blank" rel="noopener noreferrer">
-              {resource.text}
+            <a
+              href={resource.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              <span className={styles.linkText}>{resource.text}</span>
+              <span className={styles.linkIcon}>🔗</span>
             </a>
           </p>
         ))}
@@ -314,8 +347,14 @@ const GrowthAndDevelopmentPage = () => {
           },
         ].map((resource, index) => (
           <p key={index}>
-            <a href={resource.link} target="_blank" rel="noopener noreferrer">
-              {resource.text}
+            <a
+              href={resource.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              <span className={styles.linkText}>{resource.text}</span>
+              <span className={styles.linkIcon}>🔗</span>
             </a>
           </p>
         ))}
