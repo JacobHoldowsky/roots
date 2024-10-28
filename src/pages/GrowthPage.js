@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import styles from "./GrowthPage.module.css";
-import reflexIntegrationImage from "../assets/logo.png";
-import sensoryRegulation from "../assets/sensoryRegulation.webp";
-import developmentalDelays from "../assets/developmentalDelays.webp";
-import motorPlanning from "../assets/motorPlanning.webp";
-import auditoryProcessing from "../assets/auditoryProcessing.webp";
-import learningDifficulties from "../assets/learningDifficulties.webp";
-import visualProcessing from "../assets/visualProcessing.webp";
-import tomatisLogo from "../assets/logo.png";
-import rmtLogo from "../assets/logo.png";
+
 import mnriLogo from "../assets/MNRI1.png";
 import mnriLogo2 from "../assets/MNRI2.png";
 import mnriLogo3 from "../assets/MNRI3.png";
@@ -30,10 +22,9 @@ import mnriLogo18 from "../assets/MNRI18.png";
 import mnriLogo19 from "../assets/MNRI19.png";
 import mnriLogo20 from "../assets/MNRI20.png";
 import mnriLogo21 from "../assets/MNRI21.png";
-import cstLogo from "../assets/cstCertificate.png";
-import cstLogo2 from "../assets/cstCertificate2.png";
-import visceralLogo from "../assets/visceralCertificate.png";
-import visceralLogo2 from "../assets/visceralCertificate2.png";
+import essentialsOfSi from "../assets/essentialsOfSi.png";
+import ndtCertificate from "../assets/ndtCertificate.png";
+
 
 const GrowthAndDevelopmentPage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -73,6 +64,8 @@ const GrowthAndDevelopmentPage = () => {
     mnriLogo19,
     mnriLogo20,
     mnriLogo21,
+    essentialsOfSi,
+    ndtCertificate,
     
   ];
 
@@ -312,7 +305,7 @@ const GrowthAndDevelopmentPage = () => {
 
       {/* Resources Section */}
       <section className={styles.section}>
-        <h2>Roots Approved Recommended Resources</h2>
+        <h2>Recommended Resources</h2>
         {[
           {
             text: "Roots Recommended Resources - OT Tools",
@@ -335,7 +328,6 @@ const GrowthAndDevelopmentPage = () => {
             </a>
           </p>
         ))}
-        <h2>Other Roots Approved Recommended Resources</h2>
         {[
           {
             text: "Forbrain (Use affiliate code 3A9905119 for 10% off)",
