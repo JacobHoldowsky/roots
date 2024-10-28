@@ -24,7 +24,7 @@ import mnriLogo20 from "../assets/MNRI20.png";
 import mnriLogo21 from "../assets/MNRI21.png";
 import essentialsOfSi from "../assets/essentialsOfSi.png";
 import ndtCertificate from "../assets/ndtCertificate.png";
-
+import CertificateBanner from "../components/CertificateBanner";
 
 const GrowthAndDevelopmentPage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -66,7 +66,6 @@ const GrowthAndDevelopmentPage = () => {
     mnriLogo21,
     essentialsOfSi,
     ndtCertificate,
-    
   ];
 
   const Modal = ({ show, onClose, imgSrc }) => {
@@ -287,17 +286,8 @@ const GrowthAndDevelopmentPage = () => {
       {/* Certificates Section */}
       <section className={styles.section}>
         <h2>Banner of Certificates</h2>
-        <div className={styles.certificatesBanner}>
-          {certificates.map((logo, index) => (
-            <img
-              src={logo}
-              alt={`Certification ${index}`}
-              key={index}
-              onClick={() => openModal(logo)} // Open modal on click
-              className={styles.clickableImage} // Add a cursor style for clarity
-            />
-          ))}
-        </div>
+        
+        <CertificateBanner />
       </section>
 
       {/* Modal for Enlarged Certificates */}

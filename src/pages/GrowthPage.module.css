@@ -100,8 +100,7 @@
 .challengeItem {
   background-color: var(--light-gray);
   padding: 30px 20px;
-  flex: 1 1 250px;
-  max-width: 350px;
+  width: 200px;
   border-radius: 15px;
   text-align: center;
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
@@ -114,7 +113,6 @@
 
 .challengeItem div {
   max-width: 100%;
-  height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
 }
