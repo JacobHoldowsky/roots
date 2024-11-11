@@ -45,19 +45,6 @@ const HomePage = () => {
 
         {/* Contact Section */}
         {/* Contact Information Section */}
-      <section className={styles.contactInfo}>
-        <h2>Contact Roots</h2>
-        <p>Please reach out through text or email.</p>
-        <p>
-          Email:{" "}
-          <a href="mailto:appointmentsbymimi@gmail.com">
-            appointmentsbymimi@gmail.com
-          </a>
-        </p>
-        <p>
-          Text: <a href="tel:+18454459230">(845) 445-9230</a>
-        </p>
-      </section>
       </main>
     </div>
   );

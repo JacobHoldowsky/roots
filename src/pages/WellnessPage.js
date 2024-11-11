@@ -39,6 +39,7 @@ import otherPhysicalConcerns from "../assets/otherPhysicalConcerns.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import CertificateBanner from "../components/CertificateBanner";
 
 const certificates = [visceralLogo, visceralLogo2, cstLogo, cstLogo2];
 
@@ -102,18 +103,7 @@ const HealthAndWellnessPage = () => {
               description: "Poor immune system",
               examples: "For example: Ear infections, eczema",
             },
-            {
-              image: (
-                <i
-                  class="fa-solid fa-arrows-to-circle fa-2xl"
-                  style={{ color: "#0f728a" }}
-                ></i>
-              ),
-              alt: "Nervous system dysregulation",
-              description: "Motor planning/coordination",
-              examples:
-                "For example: stress, decreased attention/focus, sleep issues",
-            },
+
             {
               image: (
                 <i
@@ -167,7 +157,7 @@ const HealthAndWellnessPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-peace fa-2xl"
+                  class="fa-solid fa-yin-yang fa-2xl"
                   style={{ color: "#0f728a" }}
                 ></i>
               ),
@@ -191,7 +181,7 @@ const HealthAndWellnessPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-scale-balanced fa-2xl"
+                  class="fa-solid fa-person-walking fa-2xl"
                   style={{ color: "#0f728a" }}
                 ></i>
               ),
@@ -251,17 +241,7 @@ const HealthAndWellnessPage = () => {
       {/* Certificates Section */}
       <section className={styles.section}>
         <h2>Banner of Certificates</h2>
-        <div className={styles.certificatesBanner}>
-          {certificates.map((logo, index) => (
-            <img
-              src={logo}
-              alt={`Certification ${index}`}
-              key={index}
-              onClick={() => openModal(logo)} // Open modal on click
-              className={styles.clickableImage} // Add a cursor style for clarity
-            />
-          ))}
-        </div>
+        <CertificateBanner certificates={certificates} />
       </section>
 
       {/* Modal for Enlarged Certificates */}
@@ -269,7 +249,7 @@ const HealthAndWellnessPage = () => {
 
       {/* Resources Section */}
       <section className={styles.section}>
-        <h2>Roots Approved Recommended Resources</h2>
+        <h2>Recommended Resources</h2>
         <p>
           <a
             href="https://www.amazon.com/hz/wishlist/ls/8CKR8NE0FVXF?ref_=wl_share"
@@ -277,9 +257,7 @@ const HealthAndWellnessPage = () => {
             rel="noopener noreferrer"
             className={styles.link}
           >
-            <span className={styles.linkText}>
-              Roots Recommended Resources - Health and Wellness Books
-            </span>
+            <span className={styles.linkText}>Health and Wellness Books</span>
             <span className={styles.linkIcon}>🔗</span>
           </a>
         </p>
@@ -301,19 +279,6 @@ const HealthAndWellnessPage = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className={styles.contactInfo}>
-        <h2>Contact Roots</h2>
-        <p>Please reach out through text or email.</p>
-        <p>
-          Email:{" "}
-          <a href="mailto:appointmentsbymimi@gmail.com">
-            appointmentsbymimi@gmail.com
-          </a>
-        </p>
-        <p>
-          Text: <a href="tel:+18454459230">(845) 445-9230</a>
-        </p>
-      </section>
     </div>
   );
 };

@@ -64,6 +64,54 @@
     width: 240px; /* Slightly larger logos */
     margin-right: 10px; /* Add more space between logo and text */
   }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    position: relative;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+  }
+  
+  .modalImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Hover effect and pointer cursor for clickable images */
+  .clickableImage {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .clickableImage:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+  }
+  
   
   /* Modern background colors */
   .reflexIntegration {

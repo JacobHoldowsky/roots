@@ -22,6 +22,10 @@ import mnriLogo18 from "../assets/MNRI18.png";
 import mnriLogo19 from "../assets/MNRI19.png";
 import mnriLogo20 from "../assets/MNRI20.png";
 import mnriLogo21 from "../assets/MNRI21.png";
+import siLogo from "../assets/si.png";
+import ndtLogo from "../assets/ndt.png";
+import adiLogo from "../assets/ndt.png";
+import imLogo from "../assets/im.png";
 import essentialsOfSi from "../assets/essentialsOfSi.png";
 import ndtCertificate from "../assets/ndtCertificate.png";
 import CertificateBanner from "../components/CertificateBanner";
@@ -41,7 +45,7 @@ const GrowthAndDevelopmentPage = () => {
     setModalOpen(false);
     setSelectedImage(null);
   };
-
+  
   const certificates = [
     mnriLogo,
     mnriLogo2,
@@ -66,6 +70,10 @@ const GrowthAndDevelopmentPage = () => {
     mnriLogo21,
     essentialsOfSi,
     ndtCertificate,
+    siLogo,
+    ndtLogo,
+    adiLogo,
+    imLogo,
   ];
 
   const Modal = ({ show, onClose, imgSrc }) => {
@@ -286,8 +294,10 @@ const GrowthAndDevelopmentPage = () => {
       {/* Certificates Section */}
       <section className={styles.section}>
         <h2>Banner of Certificates</h2>
-        
-        <CertificateBanner />
+
+        <CertificateBanner
+          certificates={certificates}
+        />
       </section>
 
       {/* Modal for Enlarged Certificates */}
@@ -298,11 +308,11 @@ const GrowthAndDevelopmentPage = () => {
         <h2>Recommended Resources</h2>
         {[
           {
-            text: "Roots Recommended Resources - OT Tools",
+            text: "OT Tools",
             link: "https://www.amazon.com/hz/wishlist/ls/TBO2PCNWQVXS?ref_=wl_share",
           },
           {
-            text: "Roots Recommended Resources - OT Books",
+            text: "OT Books",
             link: "https://www.amazon.com/hz/wishlist/ls/3VB13SV25IIVH?ref_=wl_share",
           },
         ].map((resource, index) => (
@@ -343,19 +353,6 @@ const GrowthAndDevelopmentPage = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className={styles.contactInfo}>
-        <h2>Contact Roots</h2>
-        <p>Please reach out through text or email.</p>
-        <p>
-          Email:{" "}
-          <a href="mailto:appointmentsbymimi@gmail.com">
-            appointmentsbymimi@gmail.com
-          </a>
-        </p>
-        <p>
-          Text: <a href="tel:+18454459230">(845) 445-9230</a>
-        </p>
-      </section>
     </div>
   );
 };

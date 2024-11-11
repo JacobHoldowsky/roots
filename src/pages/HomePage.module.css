@@ -62,7 +62,7 @@ img {
   align-items: center;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url('../assets/background6.webp');
+  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url('../assets/logo4_hero_background_high_res.png');
   background-size: cover;
   background-position: top;
   text-align: center;
@@ -164,7 +164,7 @@ img {
   width: 200px; /* Smaller range for responsive diameter */
   height: 200px; /* Smaller range for responsive diameter */
   aspect-ratio: 1 / 1; /* Keeps it perfectly circular */
-  background-color: #dbfffb;
+  background-color: #37adca;
   text-align: center;
   border-radius: 50%; /* Makes it circular */
   box-shadow: var(--shadow-primary);

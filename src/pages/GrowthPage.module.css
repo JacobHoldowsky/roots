@@ -101,6 +101,7 @@
   background-color: var(--light-gray);
   padding: 30px 20px;
   width: 200px;
+  height: 105px;
   border-radius: 15px;
   text-align: center;
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);

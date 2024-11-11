@@ -8,11 +8,11 @@
 }
 
 .footer {
-  background-color: var(--footer-bg-color);
-  color: var(--footer-text-color);
+  background-color: #0f728a;
+  color: white;
   padding: 2rem 0;
   text-align: center;
-  border-top: 1px solid var(--footer-border-color);
+  border-top: 1px solid #0f728a
 }
 
 .footer-container {
@@ -30,13 +30,13 @@
 }
 
 .footer-info a {
-  color: var(--footer-link-color);
+  color: #abeeff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-info a:hover {
-  color: var(--footer-link-hover-color);
+  color: #ade4f2;
 }
 
 .footer-social {
