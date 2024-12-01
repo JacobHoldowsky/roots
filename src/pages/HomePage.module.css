@@ -62,9 +62,9 @@ img {
   align-items: center;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(rgba(34, 34, 34, 0.6), rgba(34, 34, 34, 0.6)), url('../assets/logo4_hero_background_high_res.png');
+  background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0)), url('../assets/Teal\ Person-01.png');
   background-size: cover;
-  background-position: top;
+  background-position: center;
   text-align: center;
   color: #fff;
   padding: 20px;

@@ -5,6 +5,7 @@
 :root {
   --primary-color: #0f728a; 
   --secondary-color: #6ac8c3; 
+  --tertiary-color: #e2f8ff; 
   --text-color: #2D2D2D;
   --background-color: #F9F9F9;
   --light-gray: #E5E5E5;
@@ -65,7 +66,7 @@
 }
 
 .challengeItem {
-  background: var(--light-gray);
+  background: var(--tertiary-color);
   padding: 20px;
   flex: 1 1 250px;
   max-width: 300px;
@@ -100,7 +101,7 @@
 }
 
 .methodItem {
-  background-color: var(--light-gray);
+  background-color: var(--tertiary-color);
   padding: 40px 30px;
   flex: 1 1 300px;
   border-radius: 10px;
@@ -281,5 +282,10 @@
   .issueItem,
   .methodItem {
     max-width: 100%;
+  }
+
+  .treatmentMethods {
+  flex-wrap: nowrap;
+  margin: 25px;
   }
 }

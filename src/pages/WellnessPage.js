@@ -40,6 +40,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import CertificateBanner from "../components/CertificateBanner";
+import massageTable from "../assets/massageTable.png";
 
 const certificates = [visceralLogo, visceralLogo2, cstLogo, cstLogo2];
 
@@ -157,7 +158,7 @@ const HealthAndWellnessPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-yin-yang fa-2xl"
+                  class="fa-solid fa-brain fa-2xl"
                   style={{ color: "#0f728a" }}
                 ></i>
               ),
@@ -169,7 +170,7 @@ const HealthAndWellnessPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-brain fa-2xl"
+                  class="fa-solid fa-person-walking fa-2xl"
                   style={{ color: "#0f728a" }}
                 ></i>
               ),
@@ -180,10 +181,7 @@ const HealthAndWellnessPage = () => {
             },
             {
               image: (
-                <i
-                  class="fa-solid fa-person-walking fa-2xl"
-                  style={{ color: "#0f728a" }}
-                ></i>
+                <i className="fa-solid fa-spa fa-2xl" style={{ color: "#0f728a" }}></i>
               ),
               title: "Visceral Manipulation",
               description:
@@ -199,7 +197,7 @@ const HealthAndWellnessPage = () => {
               ),
               title: "Raindrop Technique",
               description:
-                "The Raindrop Technique is an aromatherapy treatment, where essential oils are dripped onto the spine and feet, then massaged in. Devleped by Gary Young of Young Living Essential Oils, it aims to balance energy, support immune function, aid in relaxation and overall well-being.",
+                "The Raindrop Technique is an aromatherapy treatment, where essential oils are dripped onto the spine and feet, then massaged in. Developed by Gary Young of Young Living Essential Oils, it aims to balance energy, support immune function, aid in relaxation and overall well-being.",
               link: "https://www.youngliving.com/us/en/learn/raindrop-technique",
             },
             {

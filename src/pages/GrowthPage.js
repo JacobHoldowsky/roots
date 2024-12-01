@@ -29,6 +29,8 @@ import imLogo from "../assets/im.png";
 import essentialsOfSi from "../assets/essentialsOfSi.png";
 import ndtCertificate from "../assets/ndtCertificate.png";
 import CertificateBanner from "../components/CertificateBanner";
+import TomatisLogo from "../assets/tomatis logo.png";
+import MnriLogo from "../assets/mnri logo.jpg";
 
 const GrowthAndDevelopmentPage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -45,7 +47,7 @@ const GrowthAndDevelopmentPage = () => {
     setModalOpen(false);
     setSelectedImage(null);
   };
-  
+
   const certificates = [
     mnriLogo,
     mnriLogo2,
@@ -111,8 +113,9 @@ const GrowthAndDevelopmentPage = () => {
       subtitle: "(Including MNRI,  RMT, and others)  ",
       description: `MNRI Masgutova Neurosensory Motor Reflex Integration is a therapeutic approach focusing on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that aren’t properly integrated. This can impact aspects of motor, sensory, emotional, and cognitive functions.`,
       extendedDescription: `RMT  Rhythmic Movement Training is an approach that uses gentle rocking and reflex integration movements that stimulate neural pathways and promote learning, emotional balance and ease of movement. RMTi is an effective way to help with symptoms of ADD/ADHD, learning challenges, autism and behavioral/emotional imbalances without the use of drugs.`,
-      link: "https://masgutovamethod.com/the-method/the-mnri-method-approach-program",
+      link: "https://masgutovamethod.com/the-method",
       additionalLink: "https://rhythmicmovement.org/",
+      image: MnriLogo,
     },
     {
       title: "Therapeutic Listening Programs",
@@ -125,6 +128,7 @@ const GrowthAndDevelopmentPage = () => {
       and enhances emotional regulation. It can help improve learning abilities, attention, and self-confidence. 
       Integrated Listening Systems (iLS) and Quick Shifts are also used to support sensory integration through specialized 
       sound therapy techniques.`,
+      image: TomatisLogo,
       link: "https://www.tomatis.com/en",
       additionalLink: "https://vitalsounds.com/",
     },
@@ -226,25 +230,39 @@ const GrowthAndDevelopmentPage = () => {
                   <p>{service.extendedDescription}</p>
                   <p>
                     To learn more, please visit:
+                    {service.image && (
+                      <div>
+                        <img
+                          className={styles.logo}
+                          src={service.image}
+                          alt={"logo"}
+                        />
+                      </div>
+                    )}
                     {service.link && (
                       <a
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.additionalLink}
+                        className={styles.link}
                       >
-                        {service.link}
+                        <div className={styles.linkText}>{service.link}</div>
                       </a>
                     )}
                     {service.additionalLink && (
-                      <a
-                        href={service.additionalLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.additionalLink}
-                      >
-                        {service.additionalLink}
-                      </a>
+                      <div>
+                        <br />
+                        <a
+                          href={service.additionalLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.link}
+                        >
+                          <div className={styles.linkText}>
+                            {service.additionalLink}
+                          </div>
+                        </a>
+                      </div>
                     )}
                   </p>
                 </>
@@ -265,7 +283,7 @@ const GrowthAndDevelopmentPage = () => {
         <h2>How do you get started with the therapy process?</h2>
         <p>
           Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to set
-          up a complimentary phone call (10 minutes). During the call, you will
+          up a complimentary 10 minute phone call. During the call, you will
           have the opportunity to express your concerns, followed by guidance on
           how to proceed.
         </p>
@@ -293,11 +311,9 @@ const GrowthAndDevelopmentPage = () => {
 
       {/* Certificates Section */}
       <section className={styles.section}>
-        <h2>Banner of Certificates</h2>
+        <h2>Additional Certificates</h2>
 
-        <CertificateBanner
-          certificates={certificates}
-        />
+        <CertificateBanner certificates={certificates} />
       </section>
 
       {/* Modal for Enlarged Certificates */}
@@ -334,7 +350,7 @@ const GrowthAndDevelopmentPage = () => {
             link: "https://www.forbrain.com/",
           },
           {
-            text: "Tomatis Infinite Headphones and Accessories",
+            text: "Tomatis Infinite Headphones",
             link: "https://infinite.tomatis.com/product/tomatis-infinite-headphones-and-accessories/",
           },
         ].map((resource, index) => (

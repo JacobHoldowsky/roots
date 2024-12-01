@@ -67,20 +67,20 @@ const AboutPage = () => {
               </button>
             )}
             {showMoreRootsHealth && (
-              <div>
-                <p>
-                  At Roots, we believe in a holistic approach to therapy. This
-                  means addressing the body, mind, and spirit together for
-                  complete wellness. By integrating different therapy methods,
-                  we help clients achieve better overall health outcomes.
-                </p>
-                <button
-                  className={styles.btnToggle}
-                  onClick={toggleSeeMoreRootsHealth}
-                >
-                  See less
-                </button>
-              </div>
+              <p>
+                At Roots, we believe in a holistic approach to therapy. This
+                means addressing the body, mind, and spirit together for
+                complete wellness. By integrating different therapy methods, we
+                help clients achieve better overall health outcomes.
+              </p>
+            )}
+            {showMoreRootsHealth && (
+              <button
+                className={styles.btnToggle}
+                onClick={toggleSeeMoreRootsHealth}
+              >
+                See less
+              </button>
             )}
           </div>
         </div>
