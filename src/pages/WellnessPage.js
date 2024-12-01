@@ -41,6 +41,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import CertificateBanner from "../components/CertificateBanner";
 import massageTable from "../assets/massageTable.png";
+import TomatisLogo from "../assets/tomatis logo.png";
+import MnriLogo from "../assets/mnri logo.jpg";
 
 const certificates = [visceralLogo, visceralLogo2, cstLogo, cstLogo2];
 
@@ -178,10 +180,14 @@ const HealthAndWellnessPage = () => {
               description:
                 "MNRI is a therapeutic approach focusing on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that are not properly integrated. This can impact aspects of motor, sensory, emotional, and cognitive functions.",
               link: "https://masgutovamethod.com/the-method/the-mnri-method-approach-program",
+              logo: MnriLogo,
             },
             {
               image: (
-                <i className="fa-solid fa-spa fa-2xl" style={{ color: "#0f728a" }}></i>
+                <i
+                  className="fa-solid fa-spa fa-2xl"
+                  style={{ color: "#0f728a" }}
+                ></i>
               ),
               title: "Visceral Manipulation",
               description:
@@ -219,6 +225,11 @@ const HealthAndWellnessPage = () => {
               <h4>{method.tagline}</h4>
               <p>
                 {method.description}
+                <div>
+                  {method.logo && (
+                    <img className={styles.logo} src={method.logo} alt="logo" />
+                  )}
+                </div>
                 {method.link && (
                   <p>
                     <a
