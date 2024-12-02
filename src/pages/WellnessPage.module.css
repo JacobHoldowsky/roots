@@ -3,8 +3,8 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #0f728a; 
-  --secondary-color: #6ac8c3; 
+  --primary-color: #0D7189; 
+  --secondary-color: #6CC8C3; 
   --tertiary-color: #e2f8ff; 
   --text-color: #2D2D2D;
   --background-color: #F9F9F9;
@@ -19,7 +19,7 @@
   width: 100px;
   height: auto;
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 5px !important;
 }
 
 /* Page Layout */
@@ -110,6 +110,7 @@
 .methodItem {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   background-color: var(--tertiary-color);
   padding: 40px 30px;

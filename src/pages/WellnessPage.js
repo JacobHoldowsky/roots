@@ -43,6 +43,8 @@ import CertificateBanner from "../components/CertificateBanner";
 import massageTable from "../assets/massageTable.png";
 import TomatisLogo from "../assets/tomatis logo.png";
 import MnriLogo from "../assets/mnri logo.jpg";
+import BarralLogo from "../assets/barralLogo.png";
+import UpledgerLogo from "../assets/upledgerLogo.png";
 
 const certificates = [visceralLogo, visceralLogo2, cstLogo, cstLogo2];
 
@@ -168,6 +170,7 @@ const HealthAndWellnessPage = () => {
               description:
                 "Craniosacral therapy is a gentle, hands-on approach that works with the craniosacral system, which includes the membranes and cerebrospinal fluid that surround the brain and spinal cord. By gently working on the bones of the skull, spine, and pelvis, they can enhance the flow and balance of cerebrospinal fluid, improving the function of the central nervous system. This therapy alleviates pain, reduces tension, and promotes relaxation and overall well-being. It is often used to treat conditions such as  headaches, neck and back pain, stress-related disorders, and developmental issues in children.",
               link: "https://www.upledger.com/",
+              logo: UpledgerLogo,
             },
             {
               image: (
@@ -185,7 +188,7 @@ const HealthAndWellnessPage = () => {
             {
               image: (
                 <i
-                  className="fa-solid fa-spa fa-2xl"
+                  className="fa-solid fa-hands fa-2xl"
                   style={{ color: "#0f728a" }}
                 ></i>
               ),
@@ -193,6 +196,7 @@ const HealthAndWellnessPage = () => {
               description:
                 "Visceral manipulation is a gentle manual therapy technique focused on improving the mobility and function of internal organs (viscera) within the abdomen and pelvis.  This therapy alleviates pain and dysfunction by restoring normal organ movement and enhancing overall structural balance.",
               link: "https://www.barralinstitute.com/therapies/",
+              logo: BarralLogo,
             },
             {
               image: (
@@ -223,13 +227,13 @@ const HealthAndWellnessPage = () => {
               {method.image}
               <h3>{method.title}</h3>
               <h4>{method.tagline}</h4>
+              <div>
+                {method.logo && (
+                  <img className={styles.logo} src={method.logo} alt="logo" />
+                )}
+              </div>
               <p>
                 {method.description}
-                <div>
-                  {method.logo && (
-                    <img className={styles.logo} src={method.logo} alt="logo" />
-                  )}
-                </div>
                 {method.link && (
                   <p>
                     <a

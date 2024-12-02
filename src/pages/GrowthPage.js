@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./GrowthPage.module.css";
 
 import mnriLogo from "../assets/MNRI1.png";
@@ -31,6 +31,15 @@ import ndtCertificate from "../assets/ndtCertificate.png";
 import CertificateBanner from "../components/CertificateBanner";
 import TomatisLogo from "../assets/tomatis logo.png";
 import MnriLogo from "../assets/mnri logo.jpg";
+
+const imagePaths = [TomatisLogo, MnriLogo];
+
+const preloadImages = (imagePaths) => {
+  imagePaths.forEach((path) => {
+    const img = new Image();
+    img.src = path;
+  });
+};
 
 const GrowthAndDevelopmentPage = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -110,7 +119,7 @@ const GrowthAndDevelopmentPage = () => {
     },
     {
       title: "Reflex Integration",
-      subtitle: "(Including MNRI,  RMT, and others)  ",
+      subtitle: "(Including MNRI,  RMT, and more)  ",
       description: `MNRI Masgutova Neurosensory Motor Reflex Integration is a therapeutic approach focusing on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that aren’t properly integrated. This can impact aspects of motor, sensory, emotional, and cognitive functions.`,
       extendedDescription: `RMT  Rhythmic Movement Training is an approach that uses gentle rocking and reflex integration movements that stimulate neural pathways and promote learning, emotional balance and ease of movement. RMTi is an effective way to help with symptoms of ADD/ADHD, learning challenges, autism and behavioral/emotional imbalances without the use of drugs.`,
       link: "https://masgutovamethod.com/the-method",
@@ -134,21 +143,24 @@ const GrowthAndDevelopmentPage = () => {
     },
   ];
 
+  useEffect(() => {
+    preloadImages(imagePaths);
+  }, []);
+
   return (
     <div className={styles.growthPage}>
       {/* WHO Section */}
       <section className={styles.section}>
         <h1>Growth & Development</h1>
-        <h2>Who We Serve</h2>
-        <p>Primarily serving infants and children.</p>
+        <p>Primarily treating infants and children.</p>
         <h3>Does your child have difficulty with any of these?</h3>
         <div className={styles.challenges}>
           {[
             {
               image: (
                 <i
-                  class="fa-solid fa-tower-broadcast fa-2xl"
-                  style={{ color: "#E07A5F" }}
+                  className="fa-solid fa-tower-broadcast fa-2xl"
+                  style={{ color: "#F68D3E" }}
                 ></i>
               ),
               alt: "Sensory Regulation",
@@ -158,8 +170,8 @@ const GrowthAndDevelopmentPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-brain fa-2xl"
-                  style={{ color: "#E07A5F" }}
+                  className="fa-solid fa-brain fa-2xl"
+                  style={{ color: "#F68D3E" }}
                 ></i>
               ),
               alt: "Developmental Delays",
@@ -168,8 +180,8 @@ const GrowthAndDevelopmentPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-arrows-to-circle fa-2xl"
-                  style={{ color: "#E07A5F" }}
+                  className="fa-solid fa-arrows-to-circle fa-2xl"
+                  style={{ color: "#F68D3E" }}
                 ></i>
               ),
               alt: "Motor planning/coordination",
@@ -178,8 +190,8 @@ const GrowthAndDevelopmentPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-school fa-2xl"
-                  style={{ color: "#E07A5F" }}
+                  className="fa-solid fa-school fa-2xl"
+                  style={{ color: "#F68D3E" }}
                 ></i>
               ),
               alt: "Learning Difficulties",
@@ -188,8 +200,8 @@ const GrowthAndDevelopmentPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-ear-listen fa-2xl"
-                  style={{ color: "#E07A5F" }}
+                  className="fa-solid fa-ear-listen fa-2xl"
+                  style={{ color: "#F68D3E" }}
                 ></i>
               ),
               alt: "Auditory processing",
@@ -198,8 +210,8 @@ const GrowthAndDevelopmentPage = () => {
             {
               image: (
                 <i
-                  class="fa-solid fa-eye fa-2xl"
-                  style={{ color: "#E07A5F" }}
+                  className="fa-solid fa-eye fa-2xl"
+                  style={{ color: "#F68D3E" }}
                 ></i>
               ),
               alt: "Visual processing",
@@ -227,19 +239,46 @@ const GrowthAndDevelopmentPage = () => {
 
               {expandedIndex === index && (
                 <>
+                  {service.title === "Reflex Integration" && (
+                    <div className={styles.logoContainer}>
+                      To learn more, please visit:
+                      {service.image && (
+                        <div>
+                          <img
+                            className={styles.logo}
+                            src={service.image}
+                            alt={"logo"}
+                          />
+                        </div>
+                      )}
+                      {service.link && (
+                        <a
+                          href={service.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.link}
+                        >
+                          <div className={styles.linkText}>{service.link}</div>
+                        </a>
+                      )}
+                    </div>
+                  )}
                   <p>{service.extendedDescription}</p>
-                  <p>
+                  <div className={styles.logoContainer}>
                     To learn more, please visit:
-                    {service.image && (
-                      <div>
-                        <img
-                          className={styles.logo}
-                          src={service.image}
-                          alt={"logo"}
-                        />
-                      </div>
-                    )}
-                    {service.link && (
+                    <br />
+                    <br />
+                    {service.image &&
+                      service.title !== "Reflex Integration" && (
+                        <div>
+                          <img
+                            className={styles.logo}
+                            src={service.image}
+                            alt={"logo"}
+                          />
+                        </div>
+                      )}
+                    {service.link && service.title !== "Reflex Integration" && (
                       <a
                         href={service.link}
                         target="_blank"
@@ -249,9 +288,11 @@ const GrowthAndDevelopmentPage = () => {
                         <div className={styles.linkText}>{service.link}</div>
                       </a>
                     )}
+                    {service.additionalLink === "https://vitalsounds.com/" && (
+                      <br />
+                    )}
                     {service.additionalLink && (
                       <div>
-                        <br />
                         <a
                           href={service.additionalLink}
                           target="_blank"
@@ -264,7 +305,7 @@ const GrowthAndDevelopmentPage = () => {
                         </a>
                       </div>
                     )}
-                  </p>
+                  </div>
                 </>
               )}
               <button

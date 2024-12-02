@@ -72,9 +72,6 @@ const Header = () => {
         {/* logo2 */}
         <div className={styles.headerLogo}>
           <Link to="/" onClick={closeMobileMenu}>
-            <img src={logo2} alt="Roots Therapy logo2" />
-          </Link>
-          <Link to="/" onClick={closeMobileMenu}>
             <img src={logo4} alt="Roots Therapy logo2" />
           </Link>
         </div>

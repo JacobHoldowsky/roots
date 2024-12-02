@@ -3,8 +3,8 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #5A4E8C; /* Deep professional purple */
-  --secondary-color: #E07A5F; /* Muted elegant orange */
+  --primary-color: #856AAF; /* Deep professional purple */
+  --secondary-color: #F68D3E; /* Muted elegant orange */
   --text-color: #2D2D2D;
   --background-color: #F9F9F9;
   --light-gray: #E5E5E5;
@@ -36,21 +36,21 @@
 
 .section h1,
 .section h2 {
-  color: #5A4E8C;
+  color: #856AAF;
   font-family: var(--heading-font-family);
   margin-bottom: 30px;
   text-align: center;
 }
 
 .section h3 {
-  color: #E07A5F;
+  color: #F68D3E;
   font-family: var(--heading-font-family);
   margin-bottom: 20px;
   text-align: center;
 }
 
 .section h4 {
-  color: #E07A5F;
+  color: #F68D3E;
   font-family: var(--heading-font-family);
   margin-bottom: 20px;
   text-align: center;
@@ -124,11 +124,18 @@
   color: var(--text-color);
 }
 
+.logoContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* Therapy Services Section */
 .therapyServices {
   display: flex;
   justify-content: center;
-  align-items: ce;
   flex-wrap: wrap;
   gap: 40px;
   margin-top: 40px;
@@ -139,6 +146,7 @@
   height: auto;
   margin: 10px;
   border-radius: 15px;
+
 }
 
 .serviceItem {
@@ -163,7 +171,7 @@
 
 .serviceItem h3 {
   font-size: 1.8rem;
-  color: #5A4E8C;
+  color: #856AAF;
   margin-bottom: 20px;
 }
 
@@ -255,7 +263,7 @@
 }
 
 .seeMoreButton {
-  background-color: #E07A5F;
+  background-color: #F68D3E;
   color: #ffffff;
   border: none;
   padding: 10px 25px;
@@ -336,7 +344,7 @@
 .closeButton {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #5A4E8C;
+  background-color: #856AAF;
   color: #fff;
   border: none;
   border-radius: 4px;

@@ -5,14 +5,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import styles from "./App.module.css"; // Import the CSS module
 import ScrollToTop from "./components/ScrollToTop"; // Import the ScrollToTop component
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-
-const HomePage = lazy(() => import("./pages/HomePage"));
-const AboutPage = lazy(() => import("./pages/AboutPage"));
-const GrowthPage = lazy(() => import("./pages/GrowthPage"));
-const WellnessPage = lazy(() => import("./pages/WellnessPage"));
-const ContactPage = lazy(() => import("./pages/ContactPage"));
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import GrowthPage from "./pages/GrowthPage";
+import WellnessPage from "./pages/WellnessPage";
+import ContactPage from "./pages/ContactPage";
 // const NotFoundPage = lazy(() => import("./pages/NotFoundPage")); // Create a 404 Page
 
 function App() {
