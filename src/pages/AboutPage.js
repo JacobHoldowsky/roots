@@ -130,7 +130,7 @@ const AboutPage = () => {
                   The passion Mimi brings to her work is coupled with a genuine
                   desire to help people rise above their challenges. Due to her
                   goal oriented approach, Mimi will help find the necessary
-                  therapeutic interventions, whether is it through the wide
+                  therapeutic interventions, whether it is through the wide
                   range of modalities she uses or by helping to find another
                   pracitioner or modality to match one’s needs. Mimi networks
                   and collaberates with other professionals in related fields

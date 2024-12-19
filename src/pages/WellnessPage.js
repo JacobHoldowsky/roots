@@ -81,8 +81,10 @@ const HealthAndWellnessPage = () => {
     <div className={styles.healthWellnessPage}>
       {/* WHO Section */}
       <section className={styles.section}>
-        <h1>Health & Wellness</h1>
-        <h2>Can you identify with any of these?</h2>
+        <h1 className={styles.header}>Health & Wellness</h1>
+        <h2 className={styles.subHeader}>
+          Can you identify with any of these?
+        </h2>
         <div className={styles.challenges}>
           {[
             {
@@ -95,7 +97,7 @@ const HealthAndWellnessPage = () => {
               alt: "Muscular/ skeletal problems",
               description: "Muscular/ skeletal problems",
               examples:
-                "For example: Torticolsis, pre/post tongue tie release, back pain, flat feet, scoliosis, postural asymmetry",
+                "Torticolsis, back pain, flat feet, scoliosis, postural asymmetry",
             },
             {
               image: (
@@ -106,7 +108,7 @@ const HealthAndWellnessPage = () => {
               ),
               alt: "Poor immune system",
               description: "Poor immune system",
-              examples: "For example: Ear infections, eczema",
+              examples: "Ear infections, eczema",
             },
 
             {
@@ -118,7 +120,7 @@ const HealthAndWellnessPage = () => {
               ),
               alt: "Women’s health concerns/Hormonal imbalance",
               description: "Women’s health concerns/Hormonal imbalance",
-              examples: "For example: PMS, PCOS",
+              examples: "PMS, PCOS",
             },
             {
               image: (
@@ -129,7 +131,7 @@ const HealthAndWellnessPage = () => {
               ),
               alt: "Digestive issues",
               description: "Digestive issues",
-              examples: "For example: reflux, constipation",
+              examples: "reflux, constipation",
             },
             {
               image: (
@@ -138,9 +140,9 @@ const HealthAndWellnessPage = () => {
                   style={{ color: "#0f728a" }}
                 ></i>
               ),
-              alt: "Any other physical concerns",
-              description: "Any other physical concerns",
-              examples: "For example: bedwetting",
+              alt: "Other physical concerns",
+              description: "Other physical concerns",
+              examples: "bedwetting, pre/post tongue tie release",
             },
           ].map((challenge, index) => (
             <div className={styles.challengeItem} key={index}>
@@ -154,9 +156,9 @@ const HealthAndWellnessPage = () => {
 
       {/* WHAT Section */}
       <section className={styles.section}>
-        <h2>
+        <h1>
           Treating Women, Infants, and Children through Bodywork and Herbs
-        </h2>
+        </h1>
         <div className={styles.treatmentMethods}>
           {[
             {
@@ -240,6 +242,7 @@ const HealthAndWellnessPage = () => {
                       href={method.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className={styles.link}
                     >
                       {method.link}
                     </a>
@@ -251,9 +254,24 @@ const HealthAndWellnessPage = () => {
         </div>
       </section>
 
+      {/* HOW Section */}
+      <section className={styles.section}>
+        <h1>How to Get Started</h1>
+        <p>
+          Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to
+          schedule your initial appointment. Please include the reason for your
+          visit and specify whether you are interested in booking a bodywork
+          session or herbal consultation.
+        </p>
+        <p>
+          Looking forward to guiding you on your path towards health and
+          wellness
+        </p>
+      </section>
+
       {/* Certificates Section */}
       <section className={styles.section}>
-        <h2>Banner of Certificates</h2>
+        <h1>Banner of Certificates</h1>
         <CertificateBanner certificates={certificates} />
       </section>
 
@@ -262,7 +280,7 @@ const HealthAndWellnessPage = () => {
 
       {/* Resources Section */}
       <section className={styles.section}>
-        <h2>Recommended Resources</h2>
+        <h1>Recommended Resources</h1>
         <p>
           <a
             href="https://www.amazon.com/hz/wishlist/ls/8CKR8NE0FVXF?ref_=wl_share"
@@ -273,21 +291,6 @@ const HealthAndWellnessPage = () => {
             <span className={styles.linkText}>Health and Wellness Books</span>
             <span className={styles.linkIcon}>🔗</span>
           </a>
-        </p>
-      </section>
-
-      {/* HOW Section */}
-      <section className={styles.section}>
-        <h2>How to Get Started</h2>
-        <p>
-          Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to
-          schedule your initial appointment. Please include the reason for your
-          visit and specify whether you are interested in booking a bodywork
-          session or herbal consultation.
-        </p>
-        <p>
-          Looking forward to guiding you on your path towards health and
-          wellness
         </p>
       </section>
 

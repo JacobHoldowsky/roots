@@ -114,7 +114,7 @@ const GrowthAndDevelopmentPage = () => {
       title: "Sensory Processing and Integration",
 
       description: `Sensory processing and integration is the brain's ability to receive, organize, and interpret sensory information from the environment and the body.`,
-      extendedDescription: `This process allows individuals to make sense of and respond appropriately to sensory inputs like touch, sound, sight, taste, and movement. Effective sensory integration helps with daily functioning, coordination, and interaction with the world. When sensory processing is disrupted, it can lead to difficulties in behavior, attention, learning and motor skills, impacting one's overall quality of life.`,
+      extendedDescription: `This process allows individuals to make sense of and respond appropriately to sensory inputs such as touch, sound, sight, taste, and movement. Effective sensory integration helps with daily functioning, coordination, and interaction with the world. When sensory processing is disrupted, it can lead to difficulties in behavior, attention, learning and motor skills, impacting one's overall quality of life.`,
       link: "https://www.spdstar.org/basic/sensory-processing-disorder",
     },
     {
@@ -153,7 +153,7 @@ const GrowthAndDevelopmentPage = () => {
       <section className={styles.section}>
         <h1>Growth & Development</h1>
         <p>Primarily treating infants and children.</p>
-        <h3>Does your child have difficulty with any of these?</h3>
+        <h3>Does your child have difficulty with:</h3>
         <div className={styles.challenges}>
           {[
             {
@@ -164,8 +164,7 @@ const GrowthAndDevelopmentPage = () => {
                 ></i>
               ),
               alt: "Sensory Regulation",
-              description:
-                "Sensory regulation, sensory defensive/sensory seeking",
+              description: "Sensory processing and integration",
             },
             {
               image: (
@@ -224,7 +223,6 @@ const GrowthAndDevelopmentPage = () => {
             </div>
           ))}
         </div>
-        <p>Or perhaps another sensory-motor based difficulty?</p>
       </section>
 
       {/* WHAT Section */}
@@ -261,6 +259,8 @@ const GrowthAndDevelopmentPage = () => {
                           <div className={styles.linkText}>{service.link}</div>
                         </a>
                       )}
+                      <br />
+                      <br />
                     </div>
                   )}
                   <p>{service.extendedDescription}</p>
@@ -333,20 +333,19 @@ const GrowthAndDevelopmentPage = () => {
         <p>
           The purpose of the evaluation is to gather pertinent background
           information via parent interview, clinical observation, as well as
-          informal and formal assessment tools. Included in the evaluation fee
+          formal and informal assessment tools. Included in the evaluation fee
           is a follow up phone call. During this call, the evaluation findings,
           goals, and recommended treatment plan will be reviewed and you will
           have the opportunity to ask questions about the process.
         </p>
         <h3>Treatment</h3>
         <p>
-          Based on the your individualized needs. Each client is looked at
-          individually and an appropriate program is recommended based on your
-          unique profile. At roots, a large focus is placed on creating a
-          practical carryover program to implement at home. Parents are expected
-          to work with your children on activities and strategies between
-          sessions. This helps strengthen the skills that are being built in
-          therapy.
+          Each client is looked at individually and an appropriate program is
+          recommended based on your unique profile. At roots, a large focus is
+          placed on creating a practical carryover program to implement at home.
+          Parents are expected to work with their children on activities and
+          strategies between sessions. This helps strengthen the skills that are
+          being built during therapy sessions.
         </p>
       </section>
 
@@ -393,6 +392,10 @@ const GrowthAndDevelopmentPage = () => {
           {
             text: "Tomatis Infinite Headphones",
             link: "https://infinite.tomatis.com/product/tomatis-infinite-headphones-and-accessories/",
+          },
+          {
+            text: "Brainbeat",
+            link: "https://brainbeat.com/",
           },
         ].map((resource, index) => (
           <p key={index}>

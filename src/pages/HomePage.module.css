@@ -62,7 +62,7 @@ img {
   align-items: center;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0)), url('../assets/Teal\ Person-01.png');
+  background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0)), url('../assets/bg2.png');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -226,6 +226,8 @@ img {
     width: 100%; /* Fill the width of the circle */
     height: 95px; /* Fill the height of the circle */
   }
+
+
 }
 
 @media (max-width: 450px) {
@@ -237,6 +239,12 @@ img {
     width: 100%; /* Fill the width of the circle */
     height: 90px; /* Fill the height of the circle */
   }
+  .homePageHero {
+    background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0)), url('../assets/mobilebg.png');
+
+
+   }
+
 }
 
 @media (max-width: 400px) {
