@@ -260,7 +260,9 @@ const GrowthAndDevelopmentPage = () => {
                         </a>
                       )}
                       <br />
+                      <div>~</div>
                       <br />
+                      
                     </div>
                   )}
                   <p>{service.extendedDescription}</p>

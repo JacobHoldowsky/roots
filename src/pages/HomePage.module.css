@@ -460,7 +460,25 @@ height: 100vh;
   }
 
 
+
 }
+
+@media (min-width: 1300px) and (max-height: 900px) {
+
+  .homePageHero {
+    background-image:  url('../assets/bigBg2.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 400px; /* Smaller range for responsive diameter */
+    height: 100%; /* Smaller range for responsive diameter */
+  }
+
+
+}
+
 
 
 /* Contact Section */
