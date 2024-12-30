@@ -31,6 +31,8 @@ import ndtCertificate from "../assets/ndtCertificate.png";
 import CertificateBanner from "../components/CertificateBanner";
 import TomatisLogo from "../assets/tomatis logo.png";
 import MnriLogo from "../assets/mnri logo.jpg";
+import VitalLinksLogo from "../assets/vital links logo.png";
+import IlsLogo from "../assets/ils logo.png";
 
 const imagePaths = [TomatisLogo, MnriLogo];
 
@@ -138,6 +140,7 @@ const GrowthAndDevelopmentPage = () => {
       extendedDescription2:
         "Integrated Listening Systems (iLS) and Quick Shifts are also used to support sensory integration through specialized sound therapy techniques.",
       image: TomatisLogo,
+      additionalImage: VitalLinksLogo,
       link: "https://www.tomatis.com/en",
       additionalLink: "https://vitalsounds.com/",
     },
@@ -260,12 +263,28 @@ const GrowthAndDevelopmentPage = () => {
                         </a>
                       )}
                       <br />
-                      <div>~</div>
                       <br />
-                      
                     </div>
                   )}
+                  <div>~</div>
+                  <br />
                   <p>{service.extendedDescription}</p>
+                  {service.extendedDescription2 && (
+                    <>
+                      <div>~</div>
+                      <br />
+                    </>
+                  )}
+                  {service.image &&
+                      service.title !== "Reflex Integration" && (
+                        <div>
+                          <img
+                            className={styles.logo}
+                            src={IlsLogo}
+                            alt={"logo"}
+                          />
+                        </div>
+                      )}
                   <p>{service.extendedDescription2}</p>
                   <div className={styles.logoContainer}>
                     To learn more, please visit:
@@ -292,8 +311,18 @@ const GrowthAndDevelopmentPage = () => {
                       </a>
                     )}
                     {service.additionalLink === "https://vitalsounds.com/" && (
-                      <br />
-                    )}
+                     
+                       
+                          <div>
+                            <br />
+                            <img
+                              className={styles.vitalLogo}
+                              src={service.additionalImage}
+                              alt={"logo"}
+                            />
+                          </div>
+                        )}
+                    
                     {service.additionalLink && (
                       <div>
                         <a
