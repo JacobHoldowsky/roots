@@ -147,7 +147,7 @@ const HealthAndWellnessPage = () => {
           ].map((challenge, index) => (
             <div className={styles.challengeItem} key={index}>
               {challenge.image}
-              <h3  className={styles.h3} >{challenge.description}</h3>
+              <h3 className={styles.h3}>{challenge.description}</h3>
               <p>{challenge.examples}</p>
             </div>
           ))}
@@ -156,7 +156,7 @@ const HealthAndWellnessPage = () => {
 
       {/* WHAT Section */}
       <section className={styles.section}>
-        <h1  className={styles.h1}>
+        <h1 className={styles.h1}>
           Treating Women, Infants, and Children through Bodywork and Herbs
         </h1>
         <div className={styles.treatmentMethods}>
@@ -271,7 +271,7 @@ const HealthAndWellnessPage = () => {
 
       {/* Certificates Section */}
       <section className={styles.section}>
-        <h1>Banner of Certificates</h1>
+        <h1 className={styles.h1}>Banner of Certificates</h1>
         <CertificateBanner certificates={certificates} />
       </section>
 
@@ -280,7 +280,7 @@ const HealthAndWellnessPage = () => {
 
       {/* Resources Section */}
       <section className={styles.section}>
-        <h1>Recommended Resources</h1>
+        <h1 className={styles.h1}>Recommended Resources</h1>
         <p>
           <a
             href="https://www.amazon.com/hz/wishlist/ls/8CKR8NE0FVXF?ref_=wl_share"
