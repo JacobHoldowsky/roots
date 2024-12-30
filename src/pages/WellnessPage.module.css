@@ -277,6 +277,10 @@
   color: #e0d6f5; /* Lighter shade of primary color */
 }
 
+.h1 {
+  color: #0D7189 !important;
+}
+
 .link {
   color: #007bff; /* Link color */
   font-weight: bold;

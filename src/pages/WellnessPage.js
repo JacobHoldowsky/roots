@@ -156,7 +156,7 @@ const HealthAndWellnessPage = () => {
 
       {/* WHAT Section */}
       <section className={styles.section}>
-        <h1>
+        <h1  className={styles.h1}>
           Treating Women, Infants, and Children through Bodywork and Herbs
         </h1>
         <div className={styles.treatmentMethods}>
@@ -256,7 +256,7 @@ const HealthAndWellnessPage = () => {
 
       {/* HOW Section */}
       <section className={styles.section}>
-        <h1>How to Get Started</h1>
+        <h1 className={styles.h1}>How to Get Started</h1>
         <p>
           Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to
           schedule your initial appointment. Please include the reason for your
