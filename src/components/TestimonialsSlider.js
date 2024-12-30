@@ -83,7 +83,7 @@ const TestimonialsSlider = () => {
 
   return (
     <section className={styles.testimonials}>
-      <h2>Hear it from Clients & Professionals</h2>
+      <h2 className={styles.h2}>Hear it from Clients & Professionals</h2>
       <Slider {...sliderSettings}>
         {testimonials.map(
           ({ quote, extendedQuote, author, showMoreKey }, index) => (

@@ -147,7 +147,7 @@ const HealthAndWellnessPage = () => {
           ].map((challenge, index) => (
             <div className={styles.challengeItem} key={index}>
               {challenge.image}
-              <h3>{challenge.description}</h3>
+              <h3  className={styles.h3} >{challenge.description}</h3>
               <p>{challenge.examples}</p>
             </div>
           ))}
@@ -227,7 +227,7 @@ const HealthAndWellnessPage = () => {
           ].map((method, index) => (
             <div className={styles.methodItem} key={index}>
               {method.image}
-              <h3>{method.title}</h3>
+              <h3 className={styles.h3}>{method.title}</h3>
               <h4>{method.tagline}</h4>
               <div>
                 {method.logo && (

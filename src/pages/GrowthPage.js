@@ -134,9 +134,9 @@ const GrowthAndDevelopmentPage = () => {
       and communication skills through specialized listening techniques.`,
       extendedDescription: `Through its unique Electronic Ear device, which combines air and bone conduction, 
       the Tomatis Method not only targets speech and language disorders but also addresses auditory processing difficulties 
-      and enhances emotional regulation. It can help improve learning abilities, attention, and self-confidence. 
-      Integrated Listening Systems (iLS) and Quick Shifts are also used to support sensory integration through specialized 
-      sound therapy techniques.`,
+      and enhances emotional regulation. It can help improve learning abilities, attention, and self-confidence.`,
+      extendedDescription2:
+        "Integrated Listening Systems (iLS) and Quick Shifts are also used to support sensory integration through specialized sound therapy techniques.",
       image: TomatisLogo,
       link: "https://www.tomatis.com/en",
       additionalLink: "https://vitalsounds.com/",
@@ -264,6 +264,7 @@ const GrowthAndDevelopmentPage = () => {
                     </div>
                   )}
                   <p>{service.extendedDescription}</p>
+                  <p>{service.extendedDescription2}</p>
                   <div className={styles.logoContainer}>
                     To learn more, please visit:
                     <br />

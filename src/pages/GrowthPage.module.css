@@ -74,7 +74,7 @@
   align-items: center;
   gap: 4px; /* Space between text and icon */
   text-decoration: none; /* Remove underline for the entire link */
-}
+  word-break: break-all; /* Optional: prevent content overflow */}
 
 .linkText {
   text-decoration: underline; /* Only underline the text */

@@ -54,6 +54,7 @@ img {
 .homePage {
   font-family: var(--font-family);
   background-color: var(--background-color);
+  margin-top: 70px;
 }
 
 /* Hero Section */
@@ -61,13 +62,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
-  background-image: linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0)), url('../assets/bg2.png');
-  background-size: cover;
+  height: 95vh;
+  background-image:  url('../assets/bigBg2.png');
+  background-size:cover;
   background-position: center;
   text-align: center;
-  color: #fff;
-  padding: 20px;
+  color: #0d7189;  padding: 20px;
   overflow: hidden; /* Ensure no overflow from content */
 }
 
@@ -126,19 +126,17 @@ img {
   border-radius: 10px;
   transition: all var(--transition-duration);
   text-align: center;
-  background-color: var(--primary-color);
+ 
   color: #fff;
   text-decoration: none;
 }
 
 .heroLink img {
-  width: 60px;
-  height: 60px;
+
   margin-bottom: 15px;
 }
 
 .heroLink h3 {
-  font-size: 1.5rem;
   margin-top: 10px;
 }
 
@@ -150,6 +148,7 @@ img {
 .homePageServices {
   padding: 80px 20px;
   text-align: center;
+
 }
 
 
@@ -157,17 +156,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
 }
 
 .homePageService {
-  width: 200px; /* Smaller range for responsive diameter */
-  height: 200px; /* Smaller range for responsive diameter */
-  aspect-ratio: 1 / 1; /* Keeps it perfectly circular */
-  background-color: #37adca;
-  text-align: center;
-  border-radius: 50%; /* Makes it circular */
-  box-shadow: var(--shadow-primary);
+  width: 400px; /* Smaller range for responsive diameter */
+  height: 400px; /* Smaller range for responsive diameter */
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
   display: flex; /* Center content */
   align-items: center;
@@ -178,7 +171,6 @@ img {
 
 .homePageService:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
 }
 
 /* Contact Information Section */
@@ -211,9 +203,7 @@ img {
 
 /* Ensure the entire image fits within the circle */
 .homePageService img {
-  width: 100%; /* Fill the width of the circle */
-  height: 100px; /* Fill the height of the circle */
-  object-fit: contain; /* Maintain the image’s entire view without cropping */
+
 }
 
 /* Media query for very small screens */
@@ -230,6 +220,55 @@ img {
 
 }
 
+@media (max-width: 1200px) {
+
+  .homePageHero {
+    background-image:  url('../assets/laptopbg2.png');
+
+
+   }
+
+   .homePageService {
+    width: 370px; /* Smaller range for responsive diameter */
+    height: 370px; /* Smaller range for responsive diameter */
+  }
+
+
+}
+
+@media (max-width: 800px) {
+
+  .homePageHero {
+    background-image:  url('../assets/tabletbg.png');
+
+
+   }
+
+   .homePageService {
+    width: 250px; /* Smaller range for responsive diameter */
+    height: 250px; /* Smaller range for responsive diameter */
+  }
+
+
+}
+@media (max-width: 1024px) and (max-height: 1366px) {
+
+  .homePageHero {
+    background-image:  url('../assets/tabletbg.png');
+
+   }
+
+   .homePageService {
+    width: 250px; /* Smaller range for responsive diameter */
+    height: 250px; /* Smaller range for responsive diameter */
+  }
+
+  
+
+
+}
+
+
 @media (max-width: 450px) {
   .homePageService {
     width: 160px; /* Smaller range for responsive diameter */
@@ -245,28 +284,181 @@ img {
 
    }
 
+
 }
 
-@media (max-width: 400px) {
-  .homePageService {
-    width: 150px; /* Smaller range for responsive diameter */
-    height: 150px;
+
+
+
+@media (max-width: 400px) and (max-height: 700px) {
+
+  .homePageHero {
+    background-image:  url('../assets/iphonesebg2.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 170px; /* Smaller range for responsive diameter */
+    height: 170px; /* Smaller range for responsive diameter */
   }
-  .homePageService img {
-    width: 100%; /* Fill the width of the circle */
-    height: 85px; /* Fill the height of the circle */
+
+
+}
+@media (max-width: 700px) and (max-height: 400px) {
+
+  .homePageHero {
+    background-image:  url('../assets/iphonesebg3.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 170px; /* Smaller range for responsive diameter */
+    height: 170px; /* Smaller range for responsive diameter */
   }
+
+
+}
+@media (max-width: 450px) and (min-height: 740px) {
+
+  .homePageHero {
+    background-image:  url('../assets/iphonexrbg.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 170px; /* Smaller range for responsive diameter */
+    height: 170px; /* Smaller range for responsive diameter */
+  }
+
+
+}
+@media (min-width: 840px) and (max-height: 435px) {
+
+  .homePageHero {
+    background-image:  url('../assets/iphonexrbg2.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 170px; /* Smaller range for responsive diameter */
+    height: 170px; /* Smaller range for responsive diameter */
+  }
+
+
+}
+@media (max-width: 750px) and (max-height: 435px) {
+
+  .homePageHero {
+    background-image:  url('../assets/galaxys8bg.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 170px; /* Smaller range for responsive diameter */
+    height: 170px; /* Smaller range for responsive diameter */
+  }
+
+
+}
+@media (min-width: 750px) and (min-height: 740px) {
+
+  .homePageHero {
+    background-image:  url('../assets/tabletbg2.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 300px; /* Smaller range for responsive diameter */
+    height: 100%; /* Smaller range for responsive diameter */
+  }
+
+
+}
+@media (min-width: 1024px) and (max-height: 768px) {
+
+  .homePageHero {
+    background-image:  url('../assets/ipadmini2.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 300px; /* Smaller range for responsive diameter */
+    height: 300px; /* Smaller range for responsive diameter */
+  }
+
+
 }
 
-@media (max-width: 350px) {
-  .homePageService {
-    width: 135px; /* Smaller range for responsive diameter */
-    height: 135px;
+
+@media (min-width: 750px) and (min-height: 1100px) {
+
+  .homePageHero {
+    background-image:  url('../assets/ipadairbg.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 300px; /* Smaller range for responsive diameter */
+    height: 100%; /* Smaller range for responsive diameter */
   }
-  .homePageService img {
-    width: 100%; /* Fill the width of the circle */
-    height: 80px; /* Fill the height of the circle */
+
+
+}
+
+@media (min-width: 1024px) and (min-height: 800px) {
+
+  .homePageHero {
+    background-image:  url('../assets/ipadairbg2.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 300px; /* Smaller range for responsive diameter */
+    height: 100%; /* Smaller range for responsive diameter */
   }
+
+
+}
+
+@media (min-width: 1300px) and (min-height: 950px) {
+
+  .homePageHero {
+    background-image:  url('../assets/ipadprobg3.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 300px; /* Smaller range for responsive diameter */
+    height: 100%; /* Smaller range for responsive diameter */
+  }
+
+
+}
+
+@media (min-width: 950px) and (min-height: 1200px) {
+
+  .homePageHero {
+    background-image:  url('../assets/ipadprobg2.png');
+height: 100vh;
+
+   }
+
+   .homePageService {
+    width: 400px; /* Smaller range for responsive diameter */
+    height: 100%; /* Smaller range for responsive diameter */
+  }
+
+
 }
 
 

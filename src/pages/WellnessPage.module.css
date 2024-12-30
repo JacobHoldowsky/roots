@@ -119,6 +119,10 @@
   transition: transform var(--transition-duration), box-shadow var(--transition-duration);
 }
 
+.h3 {
+  color: #0D7189 !important;
+}
+
 .link {
   color: #007bff; /* Link color */
   font-weight: bold; /* Makes text bold */

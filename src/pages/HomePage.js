@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import healthLogo from "../assets/healthLogo.png";
-import logo from "../assets/logo.png";
+import healthLogo from "../assets/healthbtn3.png";
+import logo from "../assets/growthbtn2.png";
 import styles from "./HomePage.module.css";
 
 /**
@@ -20,7 +20,6 @@ const HomePage = () => {
           aria-labelledby="hero-heading"
         >
           <div className={styles.heroContent}>
-            <h1 id="hero-heading">Live Your Life to the Fullest</h1>
             <div className={styles.heroLinks}>
               {/* Growth and Development Service */}
               <Link
