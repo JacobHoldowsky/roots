@@ -126,7 +126,7 @@
 .link {
   color: #007bff; /* Link color */
   font-weight: bold; /* Makes text bold */
-  font-size: 1.1em; /* Slightly increase font size */
+  font-size: 1em; /* Slightly increase font size */
   display: inline-flex;
   align-items: center;
   gap: 4px; /* Space between text and icon */
@@ -280,7 +280,7 @@
 .link {
   color: #007bff; /* Link color */
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: .8em;
   display: inline-flex;
   align-items: center;
   gap: 4px; /* Space between text and icon */
