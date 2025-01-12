@@ -74,10 +74,9 @@ img {
 }
 
 .heroContent {
-  height: 70%;
+  height: 95%;
   display: flex;
   flex-direction: column;
-  align-items: space-between;
   justify-content: space-around;
   max-width: var(--max-content-width);
   margin: 0 auto;
@@ -87,11 +86,9 @@ img {
 }
 
 .blast {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 2.5rem; /* Adjust as needed */
-
+  
+  font-size: 2.4rem; /* Adjust as needed */
+  font-weight: bolder;
 
   margin-left: 1vw;
   margin-bottom: 20px;
@@ -134,8 +131,8 @@ img {
 .heroLinks {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
-  margin-top: 40px;
 }
 
 .heroLink {
@@ -257,28 +254,37 @@ height: 200px;
 /* Responsive Design */
 
 /* Larger devices, wide screens */
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
  
 
-  .heroLinks {
-    gap: 20px;
-  }
+  .heroLink img {
+    height: 220px;
+    }
 
+    .heroContent h1, .blast {
+      font-size: 3.5rem; /* Reduced size to prevent overflow */
+    }
+  
+    .heroContent h2 {
+      font-size: 2rem;
+    }
+
+}
+@media (max-width: 800px) {
+ 
+
+  .heroLink img {
+    height: 175px;
+    }
 
 }
 
 /* Tablets */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
 
 
-  .heroContent h1 {
-    font-size: 2.5rem;
-  }
-
-  .heroContent p {
-    font-size: 1.1rem;
-  }
-
+  
+  
 
 
 
@@ -286,13 +292,17 @@ height: 200px;
 
 /* Mobile devices */
 @media (max-width: 480px) {
-  .heroContent h1 {
-    font-size: 1.8rem; /* Reduced size to prevent overflow */
+  .heroLink img {
+    height: 150px;
+    }
+  .heroContent h1, .blast {
+    font-size: 1.4rem; /* Reduced size to prevent overflow */
   }
 
-  .heroContent p {
-    font-size: 1rem;
+  .heroContent h2 {
+    font-size: 1.2rem;
   }
+
 
   .homePageContact p,
   .homePageContact h2 {
