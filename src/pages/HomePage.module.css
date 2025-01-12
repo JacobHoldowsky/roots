@@ -258,15 +258,15 @@ height: 200px;
  
 
   .heroLink img {
-    height: 220px;
+    height: 160px;
     }
 
     .heroContent h1, .blast {
-      font-size: 3.5rem; /* Reduced size to prevent overflow */
+      font-size: 2.4rem; /* Reduced size to prevent overflow */
     }
   
     .heroContent h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
 }
@@ -274,9 +274,15 @@ height: 200px;
  
 
   .heroLink img {
-    height: 175px;
+    height: 150px;
     }
+  .heroContent h1, .blast {
+    font-size: 1.8rem; /* Reduced size to prevent overflow */
+  }
 
+  .heroContent h2 {
+    font-size: 1.4rem;
+  }
 }
 
 /* Tablets */
@@ -293,7 +299,33 @@ height: 200px;
 /* Mobile devices */
 @media (max-width: 480px) {
   .heroLink img {
-    height: 150px;
+    height: 120px;
+    }
+  .heroContent h1, .blast {
+    font-size: 1.4rem; /* Reduced size to prevent overflow */
+  }
+
+  .heroContent h2 {
+    font-size: 1.2rem;
+  }
+
+
+  .homePageContact p,
+  .homePageContact h2 {
+    font-size: 1rem;
+  }
+
+  .homePageService h3 {
+    font-size: 1.4rem;
+  }
+
+
+
+
+}
+@media (max-width: 350px) {
+  .heroLink img {
+    height: 100px;
     }
   .heroContent h1, .blast {
     font-size: 1.4rem; /* Reduced size to prevent overflow */

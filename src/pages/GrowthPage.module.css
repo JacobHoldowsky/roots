@@ -67,7 +67,7 @@
 }
 
 .link {
-  color: #F68D3E; /* Link color */
+  color: #443ef6; /* Link color */
   font-weight: bold; /* Makes text bold */
   font-size: .8em; /* Slightly increase font size */
   display: inline-flex;
@@ -104,7 +104,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #856AAF;
+  background-color: rgba(133, 106, 175, 0.3);;
   padding: 30px 20px;
   width: 200px;
   height: 200px;
@@ -161,7 +161,7 @@
 }
 
 .serviceItem {
-  background-color: #856AAF;
+  background-color: rgba(133, 106, 175, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,7 +182,7 @@
 
 .serviceItem h3 {
   font-size: 1.8rem;
-  color: ##f68d3e;
+  color: #f68d3e;
   margin-bottom: 20px;
 }
 
