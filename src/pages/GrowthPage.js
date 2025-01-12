@@ -32,7 +32,8 @@ import CertificateBanner from "../components/CertificateBanner";
 import TomatisLogo from "../assets/tomatis logo.png";
 import MnriLogo from "../assets/mnri logo.jpg";
 import VitalLinksLogo from "../assets/vital links logo.png";
-import IlsLogo from "../assets/ils logo.png";
+import rmtLogo from "../assets/rmtLogo.png";
+import ilsLogo from "../assets/ilsLogo.jpeg";
 
 const imagePaths = [TomatisLogo, MnriLogo];
 
@@ -123,10 +124,11 @@ const GrowthAndDevelopmentPage = () => {
       title: "Reflex Integration",
       subtitle: "(Including MNRI,  RMT, and more)  ",
       description: `MNRI Masgutova Neurosensory Motor Reflex Integration is a therapeutic approach focusing on the integration and remediation of reflex patterns in the nervous system. The therapy aims to address developmental and neurological challenges by working with reflexes that aren’t properly integrated. This can impact aspects of motor, sensory, emotional, and cognitive functions.`,
-      extendedDescription: `RMT  Rhythmic Movement Training is an approach that uses gentle rocking and reflex integration movements that stimulate neural pathways and promote learning, emotional balance and ease of movement. RMTi is an effective way to help with symptoms of ADD/ADHD, learning challenges, autism and behavioral/emotional imbalances without the use of drugs.`,
+      extendedDescription: `RMT Rhythmic Movement Training is an approach that uses gentle rocking and reflex integration movements that stimulate neural pathways and promote learning, emotional balance and ease of movement. RMTi is an effective way to help with symptoms of ADD/ADHD, learning challenges, autism and behavioral/emotional imbalances without the use of drugs.`,
       link: "https://masgutovamethod.com/the-method",
       additionalLink: "https://rhythmicmovement.org/",
       image: MnriLogo,
+      additionalImage: rmtLogo,
     },
     {
       title: "Therapeutic Listening Programs",
@@ -142,7 +144,7 @@ const GrowthAndDevelopmentPage = () => {
       image: TomatisLogo,
       additionalImage: VitalLinksLogo,
       link: "https://www.tomatis.com/en",
-      additionalLink: "https://vitalsounds.com/",
+      additionalLink: "https://integratedlistening.com/",
     },
   ];
 
@@ -245,6 +247,7 @@ const GrowthAndDevelopmentPage = () => {
                       To learn more, please visit:
                       {service.image && (
                         <div>
+                           <br />
                           <img
                             className={styles.logo}
                             src={service.image}
@@ -263,44 +266,30 @@ const GrowthAndDevelopmentPage = () => {
                         </a>
                       )}
                       <br />
-                      <br />
                     </div>
                   )}
-                  <div>~</div>
-                  <br />
-                  <p>{service.extendedDescription}</p>
-                  {service.extendedDescription2 && (
+                  {service.extendedDescription ===
+                    "RMT Rhythmic Movement Training is an approach that uses gentle rocking and reflex integration movements that stimulate neural pathways and promote learning, emotional balance and ease of movement. RMTi is an effective way to help with symptoms of ADD/ADHD, learning challenges, autism and behavioral/emotional imbalances without the use of drugs." && (
                     <>
                       <div>~</div>
                       <br />
                     </>
                   )}
-                  {service.image &&
-                      service.title !== "Reflex Integration" && (
-                        <div>
-                          <img
-                            className={styles.logo}
-                            src={IlsLogo}
-                            alt={"logo"}
-                          />
-                        </div>
-                      )}
-                  <p>{service.extendedDescription2}</p>
-                  <div className={styles.logoContainer}>
-                    To learn more, please visit:
-                    <br />
-                    <br />
-                    {service.image &&
-                      service.title !== "Reflex Integration" && (
-                        <div>
-                          <img
-                            className={styles.logo}
-                            src={service.image}
-                            alt={"logo"}
-                          />
-                        </div>
-                      )}
-                    {service.link && service.title !== "Reflex Integration" && (
+
+                  <p>{service.extendedDescription}</p>
+                  {service.extendedDescription ===
+                    `Through its unique Electronic Ear device, which combines air and bone conduction, 
+      the Tomatis Method not only targets speech and language disorders but also addresses auditory processing difficulties 
+      and enhances emotional regulation. It can help improve learning abilities, attention, and self-confidence.` && (
+                    <>
+                      <div>
+                       
+                        <img
+                          className={styles.logo}
+                          src={TomatisLogo}
+                          alt={"logo"}
+                        />
+                      </div>
                       <a
                         href={service.link}
                         target="_blank"
@@ -309,20 +298,62 @@ const GrowthAndDevelopmentPage = () => {
                       >
                         <div className={styles.linkText}>{service.link}</div>
                       </a>
+                      <br />
+                    </>
+                  )}
+
+                  {service.extendedDescription2 && (
+                    <>
+                      <div>~</div>
+                      <br />
+                    </>
+                  )}
+                  <p>{service.extendedDescription2}</p>
+                  <div className={styles.logoContainer}>
+                    To learn more, please visit:
+                    {service.extendedDescription2 ===
+                      "Integrated Listening Systems (iLS) and Quick Shifts are also used to support sensory integration through specialized sound therapy techniques." && (
+                      <div>
+                        <br/>
+                        <img
+                          className={styles.logo}
+                          src={ilsLogo}
+                          alt={"logo"}
+                        />
+                      </div>
                     )}
-                    {service.additionalLink === "https://vitalsounds.com/" && (
-                     
-                       
-                          <div>
-                            <br />
-                            <img
-                              className={styles.vitalLogo}
-                              src={service.additionalImage}
-                              alt={"logo"}
-                            />
-                          </div>
-                        )}
-                    
+                    {/* {service.image &&
+                      service.title !== "Reflex Integration" && (
+                        <div>
+                          <img
+                            className={styles.logo}
+                            src={service.image}
+                            alt={"logo"}
+                          />
+                        </div>
+                      )} */}
+                    {/* {service.link && service.title !== "Reflex Integration" && (
+                      <a
+                        href={service.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.link}
+                      >
+                        <div className={styles.linkText}>{service.link}</div>
+                      </a>
+                    )} */}
+                    {service.additionalLink === "https://integratedlistening.com/" ||
+                      (service.additionalLink ===
+                        "https://rhythmicmovement.org/" && (
+                        <div>
+                          <br />
+                          <img
+                            className={styles.vitalLogo}
+                            src={service.additionalImage}
+                            alt={"logo"}
+                          />
+                        </div>
+                      ))}
                     {service.additionalLink && (
                       <div>
                         <a

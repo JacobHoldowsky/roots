@@ -3,8 +3,8 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #0f728a; 
-  --secondary-color: #6ac8c3; 
+  --primary-color: #0D7189; 
+  --secondary-color: #6CC8C3; 
   --text-color: #2D2D2D;
   --background-color: #F9F9F9;
   --light-gray: #E5E5E5;
@@ -73,7 +73,7 @@
 }
 
 .btnToggle {
-  background-color: #6ac8c3;
+  background-color: #6CC8C3;
   color: #ffffff;
   border: none;
   padding: 10px 25px;
@@ -85,7 +85,7 @@
 }
 
 .btnToggle:hover {
-  background-color: #0f728a;
+  background-color: #0D7189;
 }
 
 /* About Mimi Section */
@@ -102,15 +102,10 @@
 .aboutMimiContent {
   flex: 1 1 400px;
   max-width: 600px;
+  padding: 25px !important;
 }
 
-.aboutMimiContent h2 {
-  text-align: left;
-}
 
-.aboutMimiContent p {
-  text-align: left;
-}
 
 .aboutMimiImage {
   flex: 1 1 300px;
@@ -238,10 +233,6 @@
     flex-direction: column;
   }
 
-  .aboutMimiContent h2,
-  .aboutMimiContent p {
-    text-align: center;
-  }
 
   .rootsItem {
     text-align: center;

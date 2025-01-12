@@ -67,7 +67,7 @@
 }
 
 .link {
-  color: #007bff; /* Link color */
+  color: #F68D3E; /* Link color */
   font-weight: bold; /* Makes text bold */
   font-size: .8em; /* Slightly increase font size */
   display: inline-flex;
@@ -76,6 +76,10 @@
   text-decoration: none; /* Remove underline for the entire link */
   word-break: break-all; /* Optional: prevent content overflow */}
 
+  .link:hover .linkText {
+    color: #fd9b50; /* Darker color on hover */
+  }
+  
 .linkText {
   text-decoration: underline; /* Only underline the text */
 }
@@ -84,9 +88,6 @@
   text-decoration: none; /* Ensure icon has no underline */
 }
 
-.link:hover .linkText {
-  color: #0056b3; /* Darker color on hover */
-}
 
 /* Challenges Section */
 .challenges {
@@ -103,7 +104,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--pale-purple);
+  background-color: #856AAF;
   padding: 30px 20px;
   width: 200px;
   height: 200px;
@@ -136,6 +137,12 @@
   text-align: center;
 }
 
+.vitalLogo {
+  height: 100px;
+  border-radius: 15px;
+  margin-bottom: 20px
+}
+
 /* Therapy Services Section */
 .therapyServices {
   display: flex;
@@ -154,7 +161,7 @@
 }
 
 .serviceItem {
-  background-color: var(--pale-purple);
+  background-color: #856AAF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +182,7 @@
 
 .serviceItem h3 {
   font-size: 1.8rem;
-  color: #856AAF;
+  color: ##f68d3e;
   margin-bottom: 20px;
 }
 

@@ -229,21 +229,21 @@ const HealthAndWellnessPage = () => {
               {method.image}
               <h3 className={styles.h3}>{method.title}</h3>
               <h4>{method.tagline}</h4>
-              <div>
-                {method.logo && (
-                  <img className={styles.logo} src={method.logo} alt="logo" />
-                )}
-              </div>
-              <p>
+              <p >
                 {method.description}
                 {method.link && (
                   <p>
+                    <div className={styles.description}>
+                      {method.logo && (
+                        <img className={styles.logo} src={method.logo} alt="logo" />
+                      )}
+                    </div>
                     <a
                       href={method.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.link}
-                    >
+                      >
                       {method.link}
                     </a>
                   </p>

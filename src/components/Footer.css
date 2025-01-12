@@ -8,7 +8,7 @@
 }
 
 .footer {
-  background-color: #0f728a;
+  background-color: #0D7189;
   color: white;
   padding: 2rem 0;
   text-align: center;
@@ -30,13 +30,13 @@
 }
 
 .footer-info a {
-  color: #abeeff;
+  color: #6CC8C3;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-info a:hover {
-  color: #ade4f2;
+  color: #79dfda;
 }
 
 .footer-social {
