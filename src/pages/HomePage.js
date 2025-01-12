@@ -20,11 +20,15 @@ const HomePage = () => {
           aria-labelledby="hero-heading"
         >
           <div className={styles.heroContent}>
+            <div>
+              <h1>Roots occupational therapy</h1>
+              <h2>Mimi Birnbaum, OTR/L</h2>
+            </div>
             <div className={styles.heroLinks}>
               {/* Growth and Development Service */}
               <Link
                 to="/growth-and-development"
-                className={`${styles.homePageService} ${styles.heroLink}`}
+                className={styles.heroLink}
                 aria-label="Growth and Development Service"
               >
                 <img src={logo} alt="Growth and Development" />
@@ -33,12 +37,13 @@ const HomePage = () => {
               {/* Health and Wellness Service */}
               <Link
                 to="/health-and-wellness"
-                className={`${styles.homePageService} ${styles.heroLink}`}
+                className={styles.heroLink}
                 aria-label="Health and Wellness Service"
               >
                 <img src={healthLogo} alt="Health and Wellness" />
               </Link>
             </div>
+            <div className={styles.blast}>LIVE YOUR LIFE TO THE FULLEST</div>
           </div>
         </section>
 
