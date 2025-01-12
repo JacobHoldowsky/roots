@@ -67,7 +67,7 @@
 }
 
 .link {
-  color: #443ef6; /* Link color */
+  color: #007bff; /* Link color */
   font-weight: bold; /* Makes text bold */
   font-size: .8em; /* Slightly increase font size */
   display: inline-flex;
@@ -77,7 +77,7 @@
   word-break: break-all; /* Optional: prevent content overflow */}
 
   .link:hover .linkText {
-    color: #fd9b50; /* Darker color on hover */
+    color: #0056b3; /* Darker color on hover */
   }
   
 .linkText {
