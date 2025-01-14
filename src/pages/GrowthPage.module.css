@@ -74,9 +74,21 @@
   align-items: center;
   gap: 4px; /* Space between text and icon */
   text-decoration: none; /* Remove underline for the entire link */
-  word-break: break-all; /* Optional: prevent content overflow */}
+  word-break: break-all; /* Optional: prevent content overflow */
+}
 
-  .link:hover .linkText {
+.inlineLink {
+  color: #007bff; /* Link color */
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* Space between text and icon */
+  text-decoration: none; /* Remove underline for the entire link */
+}
+
+
+
+  .link:hover, .inlineLink:hover {
     color: #0056b3; /* Darker color on hover */
   }
   

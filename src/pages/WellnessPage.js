@@ -258,7 +258,19 @@ const HealthAndWellnessPage = () => {
       <section className={styles.section}>
         <h1 className={styles.h1}>How to Get Started</h1>
         <p>
-          Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to
+          Contact Roots via <a
+            className={styles.inlineLink}
+            href="mailto:appointmentsbymimi@gmail.com"
+          >
+            <span className={styles.linkText}>email</span>
+          </a>{" "}
+          or{" "}
+          <a
+            className={styles.inlineLink}
+            href="sms:+18454459230?body=Hi, I would like to set up a complimentary 10 minute phone call."
+          >
+            <span className={styles.linkText}>text</span>
+          </a> to
           schedule your initial appointment. Please include the reason for your
           visit and specify whether you are interested in booking a bodywork
           session or herbal consultation.

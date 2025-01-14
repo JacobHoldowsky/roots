@@ -292,6 +292,21 @@
   text-decoration: none; /* Remove underline for the entire link */
 }
 
+.inlineLink {
+  color: #007bff; /* Link color */
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px; /* Space between text and icon */
+  text-decoration: none; /* Remove underline for the entire link */
+}
+
+
+
+  .link:hover, .inlineLink:hover {
+    color: #0056b3; /* Darker color on hover */
+  }
+
 .linkText {
   text-decoration: underline; /* Only underline the text */
 }
@@ -317,9 +332,7 @@
   text-decoration: none; /* Ensure icon has no underline */
 }
 
-.link:hover .linkText {
-  color: #0056b3; /* Darker color on hover for the text */
-}
+
 
 @media (max-width: 768px) {
   .section {

@@ -247,7 +247,7 @@ const GrowthAndDevelopmentPage = () => {
                       To learn more, please visit:
                       {service.image && (
                         <div>
-                           <br />
+                          <br />
                           <img
                             className={styles.logo}
                             src={service.image}
@@ -283,7 +283,6 @@ const GrowthAndDevelopmentPage = () => {
       and enhances emotional regulation. It can help improve learning abilities, attention, and self-confidence.` && (
                     <>
                       <div>
-                       
                         <img
                           className={styles.logo}
                           src={TomatisLogo}
@@ -314,7 +313,7 @@ const GrowthAndDevelopmentPage = () => {
                     {service.extendedDescription2 ===
                       "Integrated Listening Systems (iLS) and Quick Shifts are also used to support sensory integration through specialized sound therapy techniques." && (
                       <div>
-                        <br/>
+                        <br />
                         <img
                           className={styles.logo}
                           src={ilsLogo}
@@ -342,7 +341,8 @@ const GrowthAndDevelopmentPage = () => {
                         <div className={styles.linkText}>{service.link}</div>
                       </a>
                     )} */}
-                    {service.additionalLink === "https://integratedlistening.com/" ||
+                    {service.additionalLink ===
+                      "https://integratedlistening.com/" ||
                       (service.additionalLink ===
                         "https://rhythmicmovement.org/" && (
                         <div>
@@ -386,10 +386,23 @@ const GrowthAndDevelopmentPage = () => {
       <section className={styles.section}>
         <h2>How do you get started with the therapy process?</h2>
         <p>
-          Contact <a href="mailto:appointmentsbymimi@gmail.com">Roots</a> to set
-          up a complimentary 10 minute phone call. During the call, you will
-          have the opportunity to express your concerns, followed by guidance on
-          how to proceed.
+          Contact Roots via{" "}
+          <a
+            className={styles.inlineLink}
+            href="mailto:appointmentsbymimi@gmail.com"
+          >
+            <span className={styles.linkText}>email</span>
+          </a>{" "}
+          or{" "}
+          <a
+            className={styles.inlineLink}
+            href="sms:+18454459230?body=Hi, I would like to set up a complimentary 10 minute phone call."
+          >
+            <span className={styles.linkText}>text</span>
+          </a>{" "}
+          to set up a complimentary 10 minute phone call. During the call, you
+          will have the opportunity to express your concerns, followed by
+          guidance on how to proceed.
         </p>
         <h3>Evaluation</h3>
         <p>(60-90 minutes)</p>
