@@ -229,13 +229,17 @@ const HealthAndWellnessPage = () => {
               {method.image}
               <h3 className={styles.h3}>{method.title}</h3>
               <h4>{method.tagline}</h4>
-              <p >
+              <p>
                 {method.description}
                 {method.link && (
                   <p>
                     <div className={styles.description}>
                       {method.logo && (
-                        <img className={styles.logo} src={method.logo} alt="logo" />
+                        <img
+                          className={styles.logo}
+                          src={method.logo}
+                          alt="logo"
+                        />
                       )}
                     </div>
                     <a
@@ -243,7 +247,7 @@ const HealthAndWellnessPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.link}
-                      >
+                    >
                       {method.link}
                     </a>
                   </p>
@@ -258,7 +262,8 @@ const HealthAndWellnessPage = () => {
       <section className={styles.section}>
         <h1 className={styles.h1}>How to Get Started</h1>
         <p>
-          Contact Roots via <a
+          Contact Roots via{" "}
+          <a
             className={styles.inlineLink}
             href="mailto:appointmentsbymimi@gmail.com"
           >
@@ -270,10 +275,10 @@ const HealthAndWellnessPage = () => {
             href="sms:+18454459230?body=Hi, I would like to set up a complimentary 10 minute phone call."
           >
             <span className={styles.linkText}>text</span>
-          </a> to
-          schedule your initial appointment. Please include the reason for your
-          visit and specify whether you are interested in booking a bodywork
-          session or herbal consultation.
+          </a>{" "}
+          to schedule your initial appointment. Please include the reason for
+          your visit and specify whether you are interested in booking a
+          bodywork session or herbal consultation.
         </p>
         <p>
           Looking forward to guiding you on your path towards health and
