@@ -97,7 +97,7 @@ const HealthAndWellnessPage = () => {
               alt: "Muscular/ skeletal problems",
               description: "Muscular/ skeletal problems",
               examples:
-                "Torticolsis, back pain, flat feet, scoliosis, postural asymmetry",
+                "Torticollis, back pain, flat feet, scoliosis, postural asymmetry",
             },
             {
               image: (
