@@ -15,6 +15,20 @@ const testimonials = [
   },
   {
     quote:
+      "Mimi is a skilled, intuitive therapist who I have the privilege to work with for over 15 years. Mimi has demonstrated expertise in her field and does not rest until she unlocks the key to each child’s success.",
+    extendedQuote:
+      "Over her years of clinical experience, Mimi has realized a dearth of material which addresses ways in which parents can support children at home and carry over skills they learn in therapy. Recognizing that void, Mimi has created new material in an engaging format which targets life skills and creates the opportunity to strengthen the parent-child connection. Her book takes an area of struggle for a child and transforms it into an opportunity for growth. It promotes practical life skills in a child-friendly, appealing way and shows great promise of success. It is a privilege to know and work with Mimi and watch as she continues to impact the lives of children worldwide.",
+    author: "Rivky Reich, Ms Ed, SAS, BCBA, Program Director, HASC Rockland",
+    showMoreKey: "rivkyReich",
+  },
+  {
+    quote:
+      "You worked with my son a few years ago. I came across old notes from each of our sessions and I am so blown away when I see all the depth, knowledge and understanding in each activity and everything you did with him...",
+
+    author: "T. Silber",
+  },
+  {
+    quote:
       "Mimi is kind and extremely knowledgeable. She uses various methods and customizes her work for each client according to what they need. She’s extremely connected to the kids and makes the sessions really fun. Mimi is also honest when she feels that the kid is ready to move on.",
     author: "C.S., Occupational Therapy Client",
   },
