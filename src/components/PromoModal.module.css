@@ -1,0 +1,102 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  width: min(92vw, 720px);
+  background: #ffffff;
+  border-radius: 16px 16px 28px 28px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  text-align: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  color: #3a3a3a;
+  cursor: pointer;
+}
+
+.headerArea {
+  padding: 20px 20px 10px;
+}
+
+.kicker {
+  margin: 0;
+  color: #0f728a;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.title {
+  margin: 4px 0 0;
+  color: #0f728a;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 800;
+}
+
+.contentArea {
+  padding: 6px 20px 12px;
+}
+
+.contentArea img {
+  width: 280px;
+  max-width: 60%;
+  margin: 0 auto;
+  border: 2px solid #0f728a;
+  border-radius: 8px;
+}
+
+.ctaRow {
+  padding: 8px 16px;
+}
+
+.primaryCta {
+  display: inline-block;
+  background: #0f728a;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.primaryCta:hover {
+  transform: translateY(-1px);
+  background: #0c5c6e;
+}
+
+.secondaryCta {
+  display: block;
+  width: 100%;
+  border: none;
+  background: #eef7f8;
+  color: #0f728a;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-top: 1px solid #d9ecef;
+  border-radius: 0 0 28px 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .contentArea img {
+    max-width: 70%;
+  }
+}
+
+

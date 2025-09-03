@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import healthLogo from "../assets/healthbtn3.png";
 import logo from "../assets/growthbtn2.png";
 import styles from "./HomePage.module.css";
+import PromoModal from "../components/PromoModal";
+import bookCover from "../assets/bookCover.jpg";
 
 /**
  * HomePage Component
  * Renders the main landing page with Hero and Contact sections.
  */
 const HomePage = () => {
+  const [isPromoOpen, setIsPromoOpen] = useState(false);
+
+  useEffect(() => {
+    // Show promo once per session
+    const seen = sessionStorage.getItem("seenPromoModal");
+    if (!seen) {
+      setIsPromoOpen(true);
+      sessionStorage.setItem("seenPromoModal", "true");
+    }
+  }, []);
+
   return (
     <div className={styles.homePage}>
+      <PromoModal
+        isOpen={isPromoOpen}
+        onClose={() => setIsPromoOpen(false)}
+        imageSrc={bookCover}
+      />
       {/* Main Content */}
       <main>
         {/* Hero Section */}
