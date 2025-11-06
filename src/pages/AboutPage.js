@@ -92,6 +92,18 @@ const AboutPage = () => {
           <div className={styles.aboutMimiContent}>
             <h2>About Mimi</h2>
             <p>
+              Mimi is a published author. As a practitioner working with
+              children and their parents, she identified the need for a tool
+              that helps families build frustration tolerance and navigate
+              tantrums. Empowering parents with at-home strategies is a central
+              part of Mimi’s work, which inspired her to create an interactive
+              therapeutic children’s book designed to build regulation skills.
+              The collaborative format guides parents, caregivers, educators,
+              and therapists through Awareness, Strategies &amp; Solutions, and
+              includes engaging features such as a dry-erase marker, mirror, and
+              reusable stickers.
+            </p>
+            <p>
               Since graduating from Downstate Medical Center’s occupational
               therapy program in 2010, Mimi continues to learn techniques to
               broaden her skills within traditional occupational therapy and
