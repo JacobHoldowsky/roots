@@ -85,8 +85,8 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.sliderh2{
-  color: #0f728a
+.sliderh2 {
+  color: #0f728a !important;
 }
 
 .btnToggle:hover {
