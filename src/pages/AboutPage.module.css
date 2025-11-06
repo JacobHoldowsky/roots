@@ -105,6 +105,16 @@
   padding: 25px !important;
 }
 
+.aboutMimiContent a {
+  color: #0f728a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.aboutMimiContent a:hover {
+  color: #0d7189;
+}
+
 
 
 .aboutMimiImage {

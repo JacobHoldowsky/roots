@@ -104,6 +104,19 @@ const AboutPage = () => {
               reusable stickers.
             </p>
             <p>
+              <strong>Podcast Interview on the topic of Regulation:</strong>
+            </p>
+            <p>
+              <a
+                href="https://youtu.be/Mnui8tMpyWE?si=Bnj1TYY6f0kl85eY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Helping Children Thrive: OT Mimi Birnbaum on Therapy, Emotions
+                &amp; Her New Book
+              </a>
+            </p>
+            <p>
               Since graduating from Downstate Medical Center’s occupational
               therapy program in 2010, Mimi continues to learn techniques to
               broaden her skills within traditional occupational therapy and
