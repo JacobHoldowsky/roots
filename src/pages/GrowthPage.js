@@ -297,6 +297,17 @@ const GrowthAndDevelopmentPage = () => {
                       >
                         <div className={styles.linkText}>{service.link}</div>
                       </a>
+                      < br />
+                      <a
+                        href="https://youtu.be/FN2PuKci6bo?si=Z4YhtqzVIxsNisMl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.link}
+                      >
+                        <div className={styles.linkText}>
+                          Listening Therapy with the Tomatis Effect
+                        </div>
+                      </a>
                       <br />
                     </>
                   )}
